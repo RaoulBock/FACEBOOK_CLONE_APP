@@ -34,13 +34,19 @@ export const APP_ICONS = {
 export const APP_STYLE = {
   container: {},
   Button: {
-    backgroundColor: "red"
+    backgroundColor: "#3867d6",
+    padding: 10,
+    alignItems: "center",
+    borderRadius: 50000,
+    marginTop: 18,
+    marginLeft: 20,
+    marginRight: 20
   },
   ButtonText: {
     color: "white"
   },
   DefaultInput: {
-    backgroundColor: "white",
+    backgroundColor: "#eee",
     width: 300,
     padding: "1.5%",
     borderRadius: 50

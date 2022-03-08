@@ -13,6 +13,7 @@ import Input from "../generic/Input";
 import { APP_ICONS, APP_STYLE } from "../../context/settings";
 import ProfileHeader from "../headers/ProfileHeader";
 import UserProfileHeader from "../headers/UserProfileHeader";
+import Button from "../generic/Button";
 
 const images = [
   {
@@ -46,7 +47,7 @@ const ProfileScreen = () => {
           right: 0,
           top: 0,
           height: HEADER_HEIGHT,
-          backgroundColor: "#eee",
+          backgroundColor: "#fff",
           elevation: 1000,
           zIndex: 1000
         }}
@@ -55,7 +56,7 @@ const ProfileScreen = () => {
       </View>
       <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
         <UserProfileHeader />
-
+        <Button title="Add to story" />
         {images.map((image) => (
           <View key={image.id} style={{ height: 400, margin: 20 }}>
             <Image
