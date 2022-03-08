@@ -16,6 +16,18 @@ export const APP_ICONS = {
         color: "#000"
       }}
     />
+  ),
+  CAMERA: (
+    <MaterialIcons
+      name="photo-camera"
+      style={{
+        color: "#000",
+        fontSize: 30,
+        backgroundColor: "#eee",
+        padding: 5,
+        borderRadius: 500000
+      }}
+    />
   )
 };
 
@@ -40,6 +52,12 @@ export const APP_STYLE = {
     borderRadius: 50000,
     width: 200,
     height: 200,
-    marginTop: -100
+    marginTop: -100,
+    borderWidth: 5,
+    borderColor: "white"
+  },
+  userProfileName: {
+    fontWeight: "600",
+    fontSize: 28
   }
 };

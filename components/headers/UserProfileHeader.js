@@ -1,20 +1,37 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
-import { APP_STYLE } from "../../context/settings";
+import { APP_ICONS, APP_STYLE } from "../../context/settings";
 
 const UserProfileHeader = () => {
   return (
     <View>
-      <Image
-        source={require("../../assets/wallpaper.jpg")}
-        style={styles.userCoverPicture}
-      />
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
+      <View>
         <Image
-          source={require("../../assets/defaultProfilePicture.jpg")}
-          style={styles.userProfilePicture}
+          source={require("../../assets/wallpaper.jpg")}
+          style={styles.userCoverPicture}
         />
+        <TouchableOpacity
+          style={{ alignItems: "center", marginTop: -50, marginLeft: 350 }}
+        >
+          {APP_ICONS.CAMERA}
+        </TouchableOpacity>
+      </View>
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <View>
+          <Image
+            source={require("../../assets/defaultProfilePicture.jpg")}
+            style={styles.userProfilePicture}
+          />
+          <TouchableOpacity
+            style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}
+          >
+            {APP_ICONS.CAMERA}
+          </TouchableOpacity>
+        </View>
+        <View style={{ marginTop: 10 }}>
+          <Text style={styles.userProfileName}>Raoul Bock</Text>
+        </View>
       </View>
     </View>
   );
