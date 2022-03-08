@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 
-import { APP_ICONS } from "../../context/settings";
+import { APP_ICONS, APP_PAGES } from "../../context/settings";
 import Input from "../generic/Input";
 
+import { AppContext, AppProvider } from "../../context/AppProvider";
+
 const ProfileHeader = () => {
+  const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View
       style={{
@@ -14,7 +17,9 @@ const ProfileHeader = () => {
         marginTop: 40
       }}
     >
-      <TouchableOpacity>{APP_ICONS.BACK}</TouchableOpacity>
+      <TouchableOpacity onPress={() => setNavPage(APP_PAGES.HOME)}>
+        {APP_ICONS.BACK}
+      </TouchableOpacity>
       <Input placeholder="Search" />
       <Text></Text>
     </View>

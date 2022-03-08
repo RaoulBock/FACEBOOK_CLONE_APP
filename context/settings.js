@@ -1,10 +1,27 @@
 import React from "react";
-import { MaterialIcons, Octicons, Entypo } from "react-native-vector-icons";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  StatusBar
+} from "react-native";
+
+import {
+  MaterialIcons,
+  Octicons,
+  Entypo,
+  Feather
+} from "react-native-vector-icons";
+
+const HEADER_HEIGHT =
+  Platform.OS === "ios" ? 115 : 70 + StatusBar.currentHeight;
 
 export const APP_PAGES = {
   LOGIN: "LOGIN",
-  REGISTER: "REGISTER",
-  PROFILE: "PROFILE"
+  HOME: "HOME",
+  PROFILE: "PROFILE",
+  COMMUNITY: "COMMUNITY"
 };
 
 export const APP_ICONS = {
@@ -82,6 +99,51 @@ export const APP_ICONS = {
         fontSize: 18
       }}
     />
+  ),
+  HOME: (
+    <Feather
+      name="home"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
+  ),
+  COMMUNITY: (
+    <Feather
+      name="users"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
+  ),
+  SETTINGS: (
+    <Feather
+      name="tool"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
+  ),
+  MESSAGE: (
+    <Feather
+      name="message-circle"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
+  ),
+  BRIEFCASE: (
+    <Feather
+      name="briefcase"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
   )
 };
 
@@ -138,5 +200,9 @@ export const APP_STYLE = {
     height: 100,
     borderRadius: 18,
     margin: 10
+  },
+  isActive: {
+    borderBottomWidth: 2,
+    borderColor: "#40739e"
   }
 };

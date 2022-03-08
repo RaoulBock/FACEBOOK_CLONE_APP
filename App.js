@@ -6,6 +6,8 @@ import { APP_PAGES } from "./context/settings";
 import { AppProvider, AppContext } from "./context/AppProvider";
 import LoginScreen from "./components/screens/LoginScreen";
 import ProfileScreen from "./components/screens/ProfileScreen";
+import HomeScreen from "./components/screens/HomeScreen";
+import CommunityScreen from "./components/screens/CommunityScreen";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -21,7 +23,9 @@ const NavComp = () => {
         {navPage === APP_PAGES.LOGIN && (
           <LoginScreen setNavPage={onSetNavPage} />
         )}
+        {navPage === APP_PAGES.HOME && <HomeScreen />}
         {navPage === APP_PAGES.PROFILE && <ProfileScreen />}
+        {navPage === APP_PAGES.COMMUNITY && <CommunityScreen />}
       </View>
     </SafeAreaView>
   );
