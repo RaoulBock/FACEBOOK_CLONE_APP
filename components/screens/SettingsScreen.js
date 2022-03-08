@@ -1,11 +1,16 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 
 import { APP_STYLE, HEADER_HEIGHT } from "../../context/settings";
 
 import HomeHeader from "../headers/HomeHeader";
 
+import { AppContext, AppProvider } from "../../context/AppProvider";
+
+import { APP_PAGES } from "../../context/settings";
+
 const SettingsScreen = () => {
+  const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View>
       <View
@@ -25,13 +30,12 @@ const SettingsScreen = () => {
           <Text style={styles.header}>Menu</Text>
           <View
             style={{
-              marginTop: 20,
-              flexDirection: "row",
-              alignItems: "center"
+              marginTop: 20
             }}
           >
             <TouchableOpacity
               style={{ flexDirection: "row", alignItems: "center" }}
+              onPress={() => setNavPage(APP_PAGES.PROFILE)}
             >
               <Image
                 source={require("../../assets/defaultProfilePicture.jpg")}
@@ -44,6 +48,12 @@ const SettingsScreen = () => {
                 <Text>See your profile</Text>
               </View>
             </TouchableOpacity>
+            <View
+              style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }}
+            />
+            <View style={{ marginTop: 20 }}>
+              <Text style={styles.header}>All Shortcuts</Text>
+            </View>
           </View>
         </View>
       </View>

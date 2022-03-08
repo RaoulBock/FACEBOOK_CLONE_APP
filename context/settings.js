@@ -207,7 +207,7 @@ export const APP_STYLE = {
     borderColor: "#40739e"
   },
   header: {
-    fontWeight: "800",
+    fontWeight: "bold",
     fontSize: 20
   }
 };
