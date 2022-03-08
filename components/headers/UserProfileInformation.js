@@ -7,7 +7,7 @@ import Button from "../generic/Button";
 const UserProfileInformation = () => {
   return (
     <View>
-      <TouchableOpacity style={{ padding: 8 }}>
+      <TouchableOpacity style={{ padding: 8, marginLeft: 20 }}>
         <View
           style={{
             flexDirection: "row",

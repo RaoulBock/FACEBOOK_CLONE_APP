@@ -15,6 +15,7 @@ import ProfileHeader from "../headers/ProfileHeader";
 import UserProfileHeader from "../headers/UserProfileHeader";
 import Button from "../generic/Button";
 import UserProfileInformation from "../headers/UserProfileInformation";
+import UserProfileFriends from "../headers/UserProfileFriends";
 
 const images = [
   {
@@ -61,6 +62,7 @@ const ProfileScreen = () => {
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
         <UserProfileInformation />
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
+        <UserProfileFriends />
         {images.map((image) => (
           <View key={image.id} style={{ height: 400, margin: 20 }}>
             <Image
