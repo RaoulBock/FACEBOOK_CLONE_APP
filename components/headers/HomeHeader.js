@@ -24,6 +24,7 @@ const HomeHeader = () => {
         style={[
           navPage === APP_PAGES.HOME ? styles.isActive : styles.NotActive
         ]}
+        onPress={() => setNavPage(APP_PAGES.HOME)}
       >
         {APP_ICONS.HOME}
       </TouchableOpacity>
