@@ -125,5 +125,18 @@ export const APP_STYLE = {
     lineHeight: 55,
     fontSize: 18,
     paddingLeft: 10
+  },
+  friendList: {
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  smallFriendsList: {
+    width: 100,
+    height: 100,
+    borderRadius: 18,
+    margin: 10
   }
 };
