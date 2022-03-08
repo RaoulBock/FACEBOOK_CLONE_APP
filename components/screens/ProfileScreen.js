@@ -5,9 +5,14 @@ import {
   ScrollView,
   Image,
   Platform,
-  StatusBar
+  StatusBar,
+  TouchableOpacity
 } from "react-native";
 import React from "react";
+import Input from "../generic/Input";
+import { APP_ICONS, APP_STYLE } from "../../context/settings";
+import ProfileHeader from "../headers/ProfileHeader";
+import UserProfileHeader from "../headers/UserProfileHeader";
 
 const images = [
   {
@@ -45,8 +50,12 @@ const ProfileScreen = () => {
           elevation: 1000,
           zIndex: 1000
         }}
-      />
+      >
+        <ProfileHeader />
+      </View>
       <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
+        <UserProfileHeader />
+
         {images.map((image) => (
           <View key={image.id} style={{ height: 400, margin: 20 }}>
             <Image
@@ -67,4 +76,4 @@ const ProfileScreen = () => {
 
 export default ProfileScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create(APP_STYLE);

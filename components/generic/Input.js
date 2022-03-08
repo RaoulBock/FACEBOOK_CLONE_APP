@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 import React from "react";
 
-const Input = () => {
+import { APP_STYLE } from "../../context/settings";
+
+const Input = (props) => {
   return (
-    <View>
-      <Text>Input</Text>
+    <View style={{ alignItems: "center" }}>
+      <TextInput placeholder={props.placeholder} style={styles.DefaultInput} />
     </View>
   );
 };
 
 export default Input;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create(APP_STYLE);

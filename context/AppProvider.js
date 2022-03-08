@@ -3,16 +3,22 @@ import { APP_PAGES } from "./settings";
 
 export const AppContext = React.createContext({
   navPage: APP_PAGES.LOGIN,
-  setNavPage: (val) => {}
+  setNavPage: (val) => {},
+  phoneNumber: "",
+  setPhoneNumber: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = useState(APP_PAGES.LOGIN);
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   return (
     <AppContext.Provider
       value={{
         navPage,
-        setNavPage
+        setNavPage,
+        phoneNumber,
+        setPhoneNumber
       }}
     >
       {children}
