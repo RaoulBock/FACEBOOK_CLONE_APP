@@ -1,5 +1,5 @@
 import React from "react";
-import { MaterialIcons, Octicons } from "react-native-vector-icons";
+import { MaterialIcons, Octicons, Entypo } from "react-native-vector-icons";
 
 export const APP_PAGES = {
   LOGIN: "LOGIN",
@@ -31,9 +31,54 @@ export const APP_ICONS = {
   ),
   HEART: (
     <Octicons
-      name="heart-fill"
+      name="heart"
       style={{
-        color: "#eee",
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  BADGE: (
+    <Octicons
+      name="briefcase"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  SCHOOL: (
+    <Octicons
+      name="mortar-board"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  CALENDER: (
+    <Octicons
+      name="calendar"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  LOCATION: (
+    <Octicons
+      name="location"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  HORIZONTALDOTS: (
+    <Entypo
+      name="dots-three-horizontal"
+      style={{
+        color: "gray",
         fontSize: 18
       }}
     />
@@ -74,5 +119,11 @@ export const APP_STYLE = {
   userProfileName: {
     fontWeight: "600",
     fontSize: 28
+  },
+  userInformation: {
+    fontWeight: "500",
+    lineHeight: 55,
+    fontSize: 18,
+    paddingLeft: 10
   }
 };
