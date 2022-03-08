@@ -1,5 +1,5 @@
 import React from "react";
-import { MaterialIcons } from "react-native-vector-icons";
+import { MaterialIcons, Octicons } from "react-native-vector-icons";
 
 export const APP_PAGES = {
   LOGIN: "LOGIN",
@@ -26,6 +26,15 @@ export const APP_ICONS = {
         backgroundColor: "#eee",
         padding: 5,
         borderRadius: 500000
+      }}
+    />
+  ),
+  HEART: (
+    <Octicons
+      name="heart-fill"
+      style={{
+        color: "#eee",
+        fontSize: 18
       }}
     />
   )

@@ -57,6 +57,15 @@ const ProfileScreen = () => {
       <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
         <UserProfileHeader />
         <Button title="Add to story" />
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
+        <TouchableOpacity>
+          <Text>Went to Windhoek International School</Text>
+          <Text>From Windhoek, Namibia</Text>
+          <Text>Single</Text>
+          <Text>Joined August 2013</Text>
+          <Text>Followed by 187 people</Text>
+        </TouchableOpacity>
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
         {images.map((image) => (
           <View key={image.id} style={{ height: 400, margin: 20 }}>
             <Image
