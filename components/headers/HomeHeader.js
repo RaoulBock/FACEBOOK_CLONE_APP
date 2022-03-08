@@ -38,7 +38,14 @@ const HomeHeader = () => {
       </TouchableOpacity>
       <TouchableOpacity>{APP_ICONS.MESSAGE}</TouchableOpacity>
       <TouchableOpacity>{APP_ICONS.BRIEFCASE}</TouchableOpacity>
-      <TouchableOpacity>{APP_ICONS.SETTINGS}</TouchableOpacity>
+      <TouchableOpacity
+        style={[
+          navPage === APP_PAGES.SETTINGS ? styles.isActive : styles.NotActive
+        ]}
+        onPress={() => setNavPage(APP_PAGES.SETTINGS)}
+      >
+        {APP_ICONS.HORIZONTALDOTS}
+      </TouchableOpacity>
     </View>
   );
 };

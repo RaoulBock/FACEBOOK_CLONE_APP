@@ -21,7 +21,8 @@ export const APP_PAGES = {
   LOGIN: "LOGIN",
   HOME: "HOME",
   PROFILE: "PROFILE",
-  COMMUNITY: "COMMUNITY"
+  COMMUNITY: "COMMUNITY",
+  SETTINGS: "SETTINGS"
 };
 
 export const APP_ICONS = {
@@ -204,5 +205,9 @@ export const APP_STYLE = {
   isActive: {
     borderBottomWidth: 2,
     borderColor: "#40739e"
+  },
+  header: {
+    fontWeight: "800",
+    fontSize: 20
   }
 };
