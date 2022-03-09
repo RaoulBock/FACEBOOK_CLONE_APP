@@ -40,15 +40,13 @@ const UserGeneralInformation = () => {
           <Input placeholder="Age" keyboardType="numeric" />
         </View>
         <View style={styles.formControl}>
-          <Text>Gender</Text>
           <View style={styles.genderPicker}>
             <Picker
               selectedValue={selectedValue}
               style={{
-                height: 50,
-                width: 150,
-                backgroundColor: "#eee",
-                width: "100%"
+                height: 40,
+                width: "100%",
+                color: "gray"
               }}
               onValueChange={(itemValue, itemIndex) =>
                 setSelectedValue(itemValue)

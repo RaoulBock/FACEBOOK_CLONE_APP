@@ -11,7 +11,9 @@ export const AppContext = React.createContext({
   email: "",
   setEmail: (val) => {},
   phoneNumber: "",
-  setPhoneNumber: (val) => {}
+  setPhoneNumber: (val) => {},
+  age: "",
+  setAge: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {

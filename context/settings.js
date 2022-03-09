@@ -226,8 +226,11 @@ export const APP_STYLE = {
     textTransform: "uppercase"
   },
   genderPicker: {
-    paddingTop: 20,
     alignItems: "center",
-    backgroundColor: "#eee"
+
+    backgroundColor: "#eee",
+    borderRadius: 10,
+    width: 300,
+    marginLeft: 45
   }
 };
