@@ -156,7 +156,7 @@ export const APP_STYLE = {
     backgroundColor: "#3867d6",
     padding: 10,
     alignItems: "center",
-    borderRadius: 50000,
+    borderRadius: 10,
     marginTop: 18,
     marginLeft: 20,
     marginRight: 20
