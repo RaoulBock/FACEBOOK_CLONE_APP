@@ -28,7 +28,10 @@ const LoginScreen = () => {
       <Button title="Login" onPress={() => setNavPage(APP_PAGES.PROFILE)} />
       <View style={{ alignItems: "center", marginTop: 20 }}>
         <Text style={{ fontWeight: "bold" }}>Don't have an account yet?</Text>
-        <Button title="Create an account" />
+        <Button
+          title="Create an account"
+          onPress={() => setNavPage(APP_PAGES.USER_REGISTER)}
+        />
       </View>
     </View>
   );
