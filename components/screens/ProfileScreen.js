@@ -54,7 +54,7 @@ const ProfileScreen = () => {
           zIndex: 1000
         }}
       >
-        <ProfileHeader />
+        <ProfileHeader onPress={() => setNavPage(APP_PAGES.HOME)} />
       </View>
       <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
         <UserProfileHeader />

@@ -6,7 +6,7 @@ import Input from "../generic/Input";
 
 import { AppContext, AppProvider } from "../../context/AppProvider";
 
-const ProfileHeader = () => {
+const ProfileHeader = (props) => {
   const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View
@@ -17,7 +17,7 @@ const ProfileHeader = () => {
         marginTop: 40
       }}
     >
-      <TouchableOpacity onPress={() => setNavPage(APP_PAGES.HOME)}>
+      <TouchableOpacity onPress={props.onPress}>
         {APP_ICONS.BACK}
       </TouchableOpacity>
       <Input placeholder="Search" />
