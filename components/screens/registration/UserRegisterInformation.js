@@ -36,7 +36,10 @@ const UserRegisterInformation = () => {
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input placeholder="First name" value={setFirstName} />
+          <Input
+            placeholder="First name"
+            onChangeText={(name) => setFirstName(name)}
+          />
         </View>
         <View style={styles.formControl}>
           <Input placeholder="Last name" value={setLastName} />

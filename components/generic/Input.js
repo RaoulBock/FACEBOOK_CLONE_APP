@@ -6,7 +6,12 @@ import { APP_STYLE } from "../../context/settings";
 const Input = (props) => {
   return (
     <View style={{ alignItems: "center" }}>
-      <TextInput placeholder={props.placeholder} style={styles.DefaultInput} />
+      <TextInput
+        placeholder={props.placeholder}
+        style={styles.DefaultInput}
+        onChangeText={props.onChangeText}
+        onPress={props.onPress}
+      />
     </View>
   );
 };

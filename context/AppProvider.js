@@ -7,13 +7,16 @@ export const AppContext = React.createContext({
   firstName: "",
   setFirstName: (val) => {},
   lastName: "",
-  setLastName: (val) => {}
+  setLastName: (val) => {},
+  email: "",
+  setEmail: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = useState(APP_PAGES.LOGIN);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <AppContext.Provider
@@ -23,7 +26,9 @@ export const AppProvider = ({ children }) => {
         firstName,
         setFirstName,
         lastName,
-        setLastName
+        setLastName,
+        email,
+        setEmail
       }}
     >
       {children}
