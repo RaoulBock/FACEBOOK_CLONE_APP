@@ -8,8 +8,9 @@ import HomeHeader from "../headers/HomeHeader";
 import { AppContext, AppProvider } from "../../context/AppProvider";
 
 import { APP_PAGES } from "../../context/settings";
+import LogoutButton from "../generic/LogoutButton";
 
-const SettingsScreen = () => {
+const SettingsScreen = ({ onPress }) => {
   const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View>
@@ -27,7 +28,16 @@ const SettingsScreen = () => {
       >
         <HomeHeader />
         <View style={{ margin: 18 }}>
-          <Text style={styles.header}>Menu</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between"
+            }}
+          >
+            <Text style={styles.header}>Menu</Text>
+            <LogoutButton onPress={() => setNavPage(APP_PAGES.LOGIN)} />
+          </View>
           <View
             style={{
               marginTop: 20

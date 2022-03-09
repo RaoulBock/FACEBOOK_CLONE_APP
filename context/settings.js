@@ -149,7 +149,9 @@ export const APP_ICONS = {
 };
 
 export const APP_STYLE = {
-  container: {},
+  container: {
+    marginTop: 350
+  },
   Button: {
     backgroundColor: "#3867d6",
     padding: 10,
@@ -166,7 +168,7 @@ export const APP_STYLE = {
     backgroundColor: "#eee",
     width: 300,
     padding: "1.5%",
-    borderRadius: 50
+    borderRadius: 10
   },
   userCoverPicture: {
     height: 300
@@ -209,5 +211,16 @@ export const APP_STYLE = {
   header: {
     fontWeight: "bold",
     fontSize: 20
+  },
+  formControl: {
+    margin: 10
+  },
+  LoginHeader: {
+    fontSize: 50,
+    fontWeight: "bold",
+    marginBottom: 30,
+    color: "#3867d6",
+    letterSpacing: 9,
+    textTransform: "uppercase"
   }
 };
