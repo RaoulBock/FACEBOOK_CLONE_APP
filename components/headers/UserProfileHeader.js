@@ -20,10 +20,28 @@ const UserProfileHeader = () => {
     phoneNumber,
     setPhoneNumber,
     profilePicture,
-    setProfilePicture
+    setProfilePicture,
+    coverPicture,
+    setCoverPicture
   } = useContext(AppContext);
 
-  const pickImage = async () => {
+  const UserProfilePicture = async () => {
+    // No permissions request is necessary for launching the image library
+    let Profileresult = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1
+    });
+
+    console.log(Profileresult);
+
+    if (!Profileresult.cancelled) {
+      setProfilePicture(Profileresult.uri);
+    }
+  };
+
+  const UserCoverPicture = async () => {
     // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
@@ -35,18 +53,26 @@ const UserProfileHeader = () => {
     console.log(result);
 
     if (!result.cancelled) {
-      setProfilePicture(result.uri);
+      setCoverPicture(result.uri);
     }
   };
   return (
     <View>
       <View>
-        <Image
-          source={require("../../assets/wallpaper.jpg")}
-          style={styles.userCoverPicture}
-        />
+        {coverPicture === null ? (
+          <Image
+            source={require("../../assets/wallpaper.jpg")}
+            style={styles.userCoverPicture}
+          />
+        ) : (
+          <Image
+            source={{ uri: coverPicture }}
+            style={styles.userCoverPicture}
+          />
+        )}
         <TouchableOpacity
           style={{ alignItems: "center", marginTop: -50, marginLeft: 350 }}
+          onPress={UserCoverPicture}
         >
           {APP_ICONS.CAMERA}
         </TouchableOpacity>
@@ -56,17 +82,17 @@ const UserProfileHeader = () => {
           {profilePicture === null ? (
             <Image
               source={require("../../assets/defaultProfilePicture.jpg")}
-              style={styles.userRegisterProfilePicture}
+              style={styles.userProfilePicture}
             />
           ) : (
             <Image
               source={{ uri: profilePicture }}
-              style={styles.userRegisterProfilePicture}
+              style={styles.userProfilePicture}
             />
           )}
           <TouchableOpacity
             style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}
-            onPress={pickImage}
+            onPress={UserProfilePicture}
           >
             {APP_ICONS.CAMERA}
           </TouchableOpacity>
