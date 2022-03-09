@@ -13,7 +13,9 @@ export const AppContext = React.createContext({
   phoneNumber: "",
   setPhoneNumber: (val) => {},
   age: "",
-  setAge: (val) => {}
+  setAge: (val) => {},
+  profilePicture: null,
+  setProfilePicture: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -22,6 +24,7 @@ export const AppProvider = ({ children }) => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [profilePicture, setProfilePicture] = useState(null);
 
   return (
     <AppContext.Provider
@@ -35,7 +38,9 @@ export const AppProvider = ({ children }) => {
         email,
         setEmail,
         phoneNumber,
-        setPhoneNumber
+        setPhoneNumber,
+        profilePicture,
+        setProfilePicture
       }}
     >
       {children}

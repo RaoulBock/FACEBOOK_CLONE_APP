@@ -7,7 +7,7 @@ import Button from "../../generic/Button";
 import { APP_ICONS, APP_STYLE, APP_PAGES } from "../../../context/settings";
 import { AppContext, AppProvider } from "../../../context/AppProvider";
 
-const UserGeneralInformation = () => {
+const UserRegisterProfilePicture = () => {
   const {
     navPage,
     setNavPage,
@@ -20,7 +20,6 @@ const UserGeneralInformation = () => {
     phoneNumber,
     setPhoneNumber
   } = useContext(AppContext);
-  const [selectedValue, setSelectedValue] = useState("");
   return (
     <View style={styles.container}>
       <View
@@ -32,31 +31,19 @@ const UserGeneralInformation = () => {
           justifyContent: "space-between"
         }}
       >
-        <Text style={styles.LoginHeader}>Hi. {firstName} </Text>
+        <Text style={styles.LoginHeader}>
+          Hi. {firstName},
+          <Text style={{ fontSize: 14, letterSpacing: 0, fontWeight: "100" }}>
+            you are almost done.
+          </Text>
+        </Text>
         <Text></Text>
       </View>
       <View>
         <View style={styles.formControl}>
           <Input placeholder="Age" keyboardType="numeric" />
         </View>
-        <View style={styles.formControl}>
-          <View style={styles.genderPicker}>
-            <Picker
-              selectedValue={selectedValue}
-              style={{
-                height: 40,
-                width: "100%",
-                color: "gray"
-              }}
-              onValueChange={(itemValue, itemIndex) =>
-                setSelectedValue(itemValue)
-              }
-            >
-              <Picker.Item label="Male" value="Male" />
-              <Picker.Item label="Female" value="Female" />
-            </Picker>
-          </View>
-        </View>
+        <View style={styles.formControl}></View>
       </View>
       <Button
         title="Continue"
@@ -66,6 +53,6 @@ const UserGeneralInformation = () => {
   );
 };
 
-export default UserGeneralInformation;
+export default UserRegisterProfilePicture;
 
 const styles = StyleSheet.create(APP_STYLE);

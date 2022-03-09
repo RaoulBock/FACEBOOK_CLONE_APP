@@ -12,6 +12,7 @@ import SettingsScreen from "./components/screens/SettingsScreen";
 import UserRegisterInformation from "./components/screens/registration/UserRegisterInformation";
 import UserContactInformation from "./components/screens/registration/UserContactInformation";
 import UserGeneralInformation from "./components/screens/registration/UserGeneralInformation";
+import UserRegisterProfilePicture from "./components/screens/registration/UserRegisterProfilePicture";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -37,6 +38,9 @@ const NavComp = () => {
         )}
         {navPage === APP_PAGES.USER_REGISTER_GENERAL && (
           <UserGeneralInformation />
+        )}
+        {navPage === APP_PAGES.USER_REGISTER_PROFILEPICTURE && (
+          <UserRegisterProfilePicture />
         )}
       </View>
     </SafeAreaView>
