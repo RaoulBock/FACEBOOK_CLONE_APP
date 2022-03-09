@@ -190,7 +190,8 @@ export const APP_STYLE = {
     width: 200,
     height: 200,
     borderWidth: 5,
-    borderColor: "white"
+    borderColor: "white",
+    marginTop: -100
   },
   userProfileName: {
     fontWeight: "600",
