@@ -24,7 +24,8 @@ export const APP_PAGES = {
   COMMUNITY: "COMMUNITY",
   SETTINGS: "SETTINGS",
   USER_REGISTER: "USER_REGISTER",
-  USER_REGISTER_CONTACT: "USER_REGISTER_CONTACT"
+  USER_REGISTER_CONTACT: "USER_REGISTER_CONTACT",
+  USER_REGISTER_GENERAL: "USER_REGISTER_GENERAL"
 };
 
 export const APP_ICONS = {
@@ -223,5 +224,10 @@ export const APP_STYLE = {
     color: "#3867d6",
     letterSpacing: 4,
     textTransform: "uppercase"
+  },
+  genderPicker: {
+    paddingTop: 20,
+    alignItems: "center",
+    backgroundColor: "#eee"
   }
 };

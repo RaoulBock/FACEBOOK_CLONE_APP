@@ -9,7 +9,9 @@ export const AppContext = React.createContext({
   lastName: "",
   setLastName: (val) => {},
   email: "",
-  setEmail: (val) => {}
+  setEmail: (val) => {},
+  phoneNumber: "",
+  setPhoneNumber: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -17,6 +19,7 @@ export const AppProvider = ({ children }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   return (
     <AppContext.Provider
@@ -28,7 +31,9 @@ export const AppProvider = ({ children }) => {
         lastName,
         setLastName,
         email,
-        setEmail
+        setEmail,
+        phoneNumber,
+        setPhoneNumber
       }}
     >
       {children}

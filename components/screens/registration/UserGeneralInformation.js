@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React, { useContext } from "react";
+import { StyleSheet, Text, View, TouchableOpacity, Picker } from "react-native";
+import React, { useContext, useState } from "react";
 
 import Input from "../../generic/Input";
 import Button from "../../generic/Button";
@@ -7,7 +7,7 @@ import Button from "../../generic/Button";
 import { APP_ICONS, APP_STYLE, APP_PAGES } from "../../../context/settings";
 import { AppContext, AppProvider } from "../../../context/AppProvider";
 
-const UserContactInformation = () => {
+const UserGeneralInformation = () => {
   const {
     navPage,
     setNavPage,
@@ -20,6 +20,7 @@ const UserContactInformation = () => {
     phoneNumber,
     setPhoneNumber
   } = useContext(AppContext);
+  const [selectedValue, setSelectedValue] = useState("");
   return (
     <View style={styles.container}>
       <View
@@ -31,22 +32,32 @@ const UserContactInformation = () => {
           justifyContent: "space-between"
         }}
       >
-        <Text style={styles.LoginHeader}>Hi. {firstName}</Text>
+        <Text style={styles.LoginHeader}>Hi. {firstName} </Text>
         <Text></Text>
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input
-            placeholder="Email (Optional)"
-            onChangeText={(email) => setEmail(email)}
-          />
+          <Input placeholder="Age" keyboardType="numeric" />
         </View>
         <View style={styles.formControl}>
-          <Input
-            placeholder="Phone number"
-            onChangeText={(phone) => setPhoneNumber(phone)}
-            keyboardType="numeric"
-          />
+          <Text>Gender</Text>
+          <View style={styles.genderPicker}>
+            <Picker
+              selectedValue={selectedValue}
+              style={{
+                height: 50,
+                width: 150,
+                backgroundColor: "#eee",
+                width: "100%"
+              }}
+              onValueChange={(itemValue, itemIndex) =>
+                setSelectedValue(itemValue)
+              }
+            >
+              <Picker.Item label="Male" value="Male" />
+              <Picker.Item label="Female" value="Female" />
+            </Picker>
+          </View>
         </View>
       </View>
       <Button
@@ -57,6 +68,6 @@ const UserContactInformation = () => {
   );
 };
 
-export default UserContactInformation;
+export default UserGeneralInformation;
 
 const styles = StyleSheet.create(APP_STYLE);

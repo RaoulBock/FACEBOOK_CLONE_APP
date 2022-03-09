@@ -11,6 +11,7 @@ const Input = (props) => {
         style={styles.DefaultInput}
         onChangeText={props.onChangeText}
         onPress={props.onPress}
+        keyboardType={props.keyboardType}
       />
     </View>
   );
