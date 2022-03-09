@@ -150,7 +150,7 @@ export const APP_ICONS = {
 
 export const APP_STYLE = {
   container: {
-    marginTop: 300
+    marginTop: 100
   },
   Button: {
     backgroundColor: "#3867d6",
