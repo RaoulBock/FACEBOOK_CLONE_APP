@@ -44,9 +44,9 @@ const UserProfileHeader = () => {
   const UserCoverPicture = async () => {
     // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
-      aspect: [4, 3],
+      aspect: [3, 4],
       quality: 1
     });
 
@@ -56,6 +56,11 @@ const UserProfileHeader = () => {
       setCoverPicture(result.uri);
     }
   };
+
+  const ProfileImageViewer = () => {
+    console.log(profilePicture, "clicked");
+  };
+
   return (
     <View>
       <View>
@@ -83,12 +88,15 @@ const UserProfileHeader = () => {
             <Image
               source={require("../../assets/defaultProfilePicture.jpg")}
               style={styles.userProfilePicture}
+              onPress={() => console.log("clicked")}
             />
           ) : (
-            <Image
-              source={{ uri: profilePicture }}
-              style={styles.userProfilePicture}
-            />
+            <TouchableOpacity onPress={ProfileImageViewer}>
+              <Image
+                source={{ uri: profilePicture }}
+                style={styles.userProfilePicture}
+              />
+            </TouchableOpacity>
           )}
           <TouchableOpacity
             style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}

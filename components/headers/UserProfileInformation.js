@@ -1,10 +1,28 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 
-import { APP_ICONS, APP_STYLE } from "../../context/settings";
+import { APP_ICONS, APP_STYLE, APP_PAGES } from "../../context/settings";
 import Button from "../generic/Button";
 
+import { AppContext, AppProvider } from "../../context/AppProvider";
+
 const UserProfileInformation = () => {
+  const {
+    navPage,
+    setNavPage,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    email,
+    setEmail,
+    phoneNumber,
+    setPhoneNumber,
+    profilePicture,
+    setProfilePicture,
+    coverPicture,
+    setCoverPicture
+  } = useContext(AppContext);
   return (
     <View>
       <TouchableOpacity style={{ padding: 8, marginLeft: 20 }}>
@@ -65,6 +83,7 @@ const UserProfileInformation = () => {
           marginRight: 20,
           borderRadius: 50000000
         }}
+        onPress={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
       >
         <Text style={{ fontWeight: "800", color: "#40739e" }}>
           Edit public details
