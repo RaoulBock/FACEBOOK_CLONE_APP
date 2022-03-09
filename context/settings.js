@@ -150,7 +150,7 @@ export const APP_ICONS = {
 
 export const APP_STYLE = {
   container: {
-    marginTop: 350
+    marginTop: 300
   },
   Button: {
     backgroundColor: "#3867d6",
@@ -167,7 +167,7 @@ export const APP_STYLE = {
   DefaultInput: {
     backgroundColor: "#eee",
     width: 300,
-    padding: "1.5%",
+    padding: "1.9%",
     borderRadius: 10
   },
   userCoverPicture: {
