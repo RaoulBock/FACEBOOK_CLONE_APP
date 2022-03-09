@@ -11,7 +11,7 @@ const LoginScreen = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View style={styles.container}>
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center", marginBottom: 30 }}>
         <Text style={styles.LoginHeader}>FaceBook</Text>
       </View>
       <View>

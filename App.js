@@ -10,6 +10,7 @@ import HomeScreen from "./components/screens/HomeScreen";
 import CommunityScreen from "./components/screens/CommunityScreen";
 import SettingsScreen from "./components/screens/SettingsScreen";
 import UserRegisterInformation from "./components/screens/registration/UserRegisterInformation";
+import UserContactInformation from "./components/screens/registration/UserContactInformation";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -30,6 +31,9 @@ const NavComp = () => {
         {navPage === APP_PAGES.COMMUNITY && <CommunityScreen />}
         {navPage === APP_PAGES.SETTINGS && <SettingsScreen />}
         {navPage === APP_PAGES.USER_REGISTER && <UserRegisterInformation />}
+        {navPage === APP_PAGES.USER_REGISTER_CONTACT && (
+          <UserContactInformation />
+        )}
       </View>
     </SafeAreaView>
   );

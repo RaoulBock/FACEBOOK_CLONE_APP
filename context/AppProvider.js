@@ -4,21 +4,26 @@ import { APP_PAGES } from "./settings";
 export const AppContext = React.createContext({
   navPage: APP_PAGES.LOGIN,
   setNavPage: (val) => {},
-  phoneNumber: "",
-  setPhoneNumber: (val) => {}
+  firstName: "",
+  setFirstName: (val) => {},
+  lastName: "",
+  setLastName: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = useState(APP_PAGES.LOGIN);
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   return (
     <AppContext.Provider
       value={{
         navPage,
         setNavPage,
-        phoneNumber,
-        setPhoneNumber
+        firstName,
+        setFirstName,
+        lastName,
+        setLastName
       }}
     >
       {children}

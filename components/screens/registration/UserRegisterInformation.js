@@ -9,32 +9,47 @@ import { APP_STYLE, APP_ICONS, APP_PAGES } from "../../../context/settings";
 import { AppContext, AppProvider } from "../../../context/AppProvider";
 
 const UserRegisterInformation = () => {
-  const { navPage, setNavPage } = useContext(AppContext);
+  const {
+    navPage,
+    setNavPage,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName
+  } = useContext(AppContext);
   return (
     <View style={styles.container}>
-      <View style={{ marginLeft: 30 }}>
+      <View
+        style={{
+          alignItems: "center",
+          marginBottom: 30,
+          flexDirection: "row",
+          marginLeft: 20,
+          justifyContent: "space-between"
+        }}
+      >
         <TouchableOpacity onPress={() => setNavPage(APP_PAGES.LOGIN)}>
           {APP_ICONS.BACK}
         </TouchableOpacity>
-      </View>
-      <View style={{ alignItems: "center" }}>
-        <Text style={styles.LoginHeader}>Create account.</Text>
+        <Text style={styles.LoginHeader}>Let's get you started.</Text>
+        <Text></Text>
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input placeholder="First name" />
+          <Input placeholder="First name" value={setFirstName} />
         </View>
         <View style={styles.formControl}>
-          <Input placeholder="Last name" />
-        </View>
-        <View style={styles.formControl}>
-          <Input placeholder="Phone number" />
-        </View>
-        <View style={styles.formControl}>
-          <Input placeholder="Email" />
+          <Input placeholder="Last name" value={setLastName} />
         </View>
       </View>
-      <Button title="Continue" />
+      <Button
+        title="Continue"
+        onPress={() => setNavPage(APP_PAGES.USER_REGISTER_CONTACT)}
+      />
+      <View style={{ alignItems: "center", marginTop: 20 }}>
+        <Text style={{ fontWeight: "bold" }}>Already have an account?</Text>
+        <Button title="Login" onPress={() => setNavPage(APP_PAGES.LOGIN)} />
+      </View>
     </View>
   );
 };

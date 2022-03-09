@@ -23,7 +23,8 @@ export const APP_PAGES = {
   PROFILE: "PROFILE",
   COMMUNITY: "COMMUNITY",
   SETTINGS: "SETTINGS",
-  USER_REGISTER: "USER_REGISTER"
+  USER_REGISTER: "USER_REGISTER",
+  USER_REGISTER_CONTACT: "USER_REGISTER_CONTACT"
 };
 
 export const APP_ICONS = {
@@ -219,7 +220,6 @@ export const APP_STYLE = {
   LoginHeader: {
     fontSize: 40,
     fontWeight: "bold",
-    marginBottom: 30,
     color: "#3867d6",
     letterSpacing: 4,
     textTransform: "uppercase"
