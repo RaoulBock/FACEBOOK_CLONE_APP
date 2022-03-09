@@ -1,7 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity, Picker } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React, { useContext, useState } from "react";
-
-import Input from "../../generic/Input";
 import Button from "../../generic/Button";
 
 import { APP_ICONS, APP_STYLE, APP_PAGES } from "../../../context/settings";
@@ -18,8 +16,11 @@ const UserRegisterProfilePicture = () => {
     email,
     setEmail,
     phoneNumber,
-    setPhoneNumber
+    setPhoneNumber,
+    profilePicture,
+    setProfilePicture
   } = useContext(AppContext);
+
   return (
     <View style={styles.container}>
       <View
@@ -41,12 +42,28 @@ const UserRegisterProfilePicture = () => {
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input placeholder="Age" keyboardType="numeric" />
+          <View style={{ alignItems: "center", justifyContent: "center" }}>
+            <View>
+              <Image
+                source={require("../../../assets/defaultProfilePicture.jpg")}
+                style={styles.userRegisterProfilePicture}
+              />
+              <TouchableOpacity
+                style={{
+                  alignItems: "center",
+                  marginTop: -50,
+                  marginLeft: 100
+                }}
+              >
+                {APP_ICONS.CAMERA}
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
         <View style={styles.formControl}></View>
       </View>
       <Button
-        title="Continue"
+        title="Go to profile"
         onPress={() => setNavPage(APP_PAGES.USER_REGISTER_PROFILEPICTURE)}
       />
     </View>

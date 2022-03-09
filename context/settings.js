@@ -185,6 +185,13 @@ export const APP_STYLE = {
     borderWidth: 5,
     borderColor: "white"
   },
+  userRegisterProfilePicture: {
+    borderRadius: 50000,
+    width: 200,
+    height: 200,
+    borderWidth: 5,
+    borderColor: "white"
+  },
   userProfileName: {
     fontWeight: "600",
     fontSize: 28
