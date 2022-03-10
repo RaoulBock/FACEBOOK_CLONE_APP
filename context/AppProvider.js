@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { APP_PAGES } from "./settings";
+import axios from "axios";
 
 export const AppContext = React.createContext({
   navPage: APP_PAGES.LOGIN,
@@ -21,6 +22,10 @@ export const AppContext = React.createContext({
   gender: "",
   setGender: (val) => {}
 });
+
+export const onSubmit = () => {
+  const registered = [firstName, lastName, email, phoneNumber, age, gender];
+};
 
 export const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = useState(APP_PAGES.LOGIN);
