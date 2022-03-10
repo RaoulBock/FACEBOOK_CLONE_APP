@@ -22,7 +22,8 @@ const UserProfileHeader = () => {
     profilePicture,
     setProfilePicture,
     coverPicture,
-    setCoverPicture
+    setCoverPicture,
+    age
   } = useContext(AppContext);
 
   const UserProfilePicture = async () => {
@@ -106,7 +107,13 @@ const UserProfileHeader = () => {
           </TouchableOpacity>
         </View>
         <View style={{ marginTop: 10 }}>
-          <Text style={styles.userProfileName}>Raoul Bock</Text>
+          <Text style={styles.userProfileName}>
+            {firstName}
+            {""} {""}
+            {lastName}
+            {""} {""}
+            <Text style={{ fontSize: 15, color: "gray" }}>{age}</Text>
+          </Text>
         </View>
       </View>
     </View>
