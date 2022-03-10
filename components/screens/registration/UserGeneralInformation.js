@@ -18,7 +18,11 @@ const UserGeneralInformation = () => {
     email,
     setEmail,
     phoneNumber,
-    setPhoneNumber
+    setPhoneNumber,
+    age,
+    setAge,
+    gender,
+    setGender
   } = useContext(AppContext);
   const [selectedValue, setSelectedValue] = useState("");
   return (
@@ -37,7 +41,12 @@ const UserGeneralInformation = () => {
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input placeholder="Age" keyboardType="numeric" />
+          <Input
+            placeholder="Age"
+            keyboardType="numeric"
+            onChangeText={(age) => setAge(age)}
+            value={age}
+          />
         </View>
         <View style={styles.formControl}>
           <View style={styles.genderPicker}>
@@ -52,8 +61,16 @@ const UserGeneralInformation = () => {
                 setSelectedValue(itemValue)
               }
             >
-              <Picker.Item label="Male" value="Male" />
-              <Picker.Item label="Female" value="Female" />
+              <Picker.Item
+                label="Male"
+                value={gender}
+                onChangeText={(gender) => setGender(gender)}
+              />
+              <Picker.Item
+                label="Female"
+                value={gender}
+                onChangeText={(gender) => setGender(gender)}
+              />
             </Picker>
           </View>
         </View>

@@ -39,13 +39,15 @@ const UserContactInformation = () => {
           <Input
             placeholder="Email (Optional)"
             onChangeText={(email) => setEmail(email)}
+            value={email}
           />
         </View>
         <View style={styles.formControl}>
           <Input
             placeholder="Phone number"
-            onChangeText={(phone) => setPhoneNumber(phone)}
+            onChangeText={(phoneNumber) => setPhoneNumber(phoneNumber)}
             keyboardType="numeric"
+            value={phoneNumber}
           />
         </View>
       </View>
