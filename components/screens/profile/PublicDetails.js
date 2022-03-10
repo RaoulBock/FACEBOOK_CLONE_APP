@@ -128,29 +128,12 @@ const PublicDetails = () => {
               margin: 12
             }}
           >
-            <Text style={{ fontWeight: "bold", fontSize: 20 }}>
-              Cover Picture
-            </Text>
+            <Text style={{ fontWeight: "bold", fontSize: 20 }}>Bio</Text>
             <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
+              Add
             </Text>
           </View>
-          <View>
-            {coverPicture === null ? (
-              <Image
-                source={require("../../../assets/wallpaper.jpg")}
-                style={{ height: 400 }}
-              />
-            ) : (
-              <Image source={{ uri: coverPicture }} style={{ height: 400 }} />
-            )}
-            <TouchableOpacity
-              style={{ alignItems: "center", marginTop: -50, marginLeft: 350 }}
-              onPress={UserCoverPicture}
-            >
-              {APP_ICONS.CAMERA}
-            </TouchableOpacity>
-          </View>
+          <View></View>
         </View>
       </View>
     </View>

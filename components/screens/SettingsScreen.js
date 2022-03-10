@@ -11,7 +11,22 @@ import { APP_PAGES } from "../../context/settings";
 import LogoutButton from "../generic/LogoutButton";
 
 const SettingsScreen = ({ onPress }) => {
-  const { navPage, setNavPage } = useContext(AppContext);
+  const {
+    navPage,
+    setNavPage,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    email,
+    setEmail,
+    phoneNumber,
+    setPhoneNumber,
+    profilePicture,
+    setProfilePicture,
+    coverPicture,
+    setCoverPicture
+  } = useContext(AppContext);
   return (
     <View>
       <View
@@ -48,9 +63,10 @@ const SettingsScreen = ({ onPress }) => {
               onPress={() => setNavPage(APP_PAGES.PROFILE)}
             >
               <Image
-                source={require("../../assets/defaultProfilePicture.jpg")}
+                source={{ uri: profilePicture }}
                 style={{ width: 60, height: 60, borderRadius: 500000 }}
               />
+
               <View style={{ marginLeft: 10 }}>
                 <Text style={{ fontWeight: "bold", fontSize: 18 }}>
                   Raoul Bock

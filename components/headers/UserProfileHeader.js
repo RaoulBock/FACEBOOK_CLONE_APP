@@ -63,7 +63,7 @@ const UserProfileHeader = () => {
 
   return (
     <View>
-      <View>
+      {/* <View>
         {coverPicture === null ? (
           <Image
             source={require("../../assets/wallpaper.jpg")}
@@ -81,7 +81,7 @@ const UserProfileHeader = () => {
         >
           {APP_ICONS.CAMERA}
         </TouchableOpacity>
-      </View>
+      </View> */}
       <View style={{ alignItems: "center", justifyContent: "center" }}>
         <View>
           {profilePicture === null ? (

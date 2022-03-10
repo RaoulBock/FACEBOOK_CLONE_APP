@@ -182,7 +182,7 @@ export const APP_STYLE = {
     borderRadius: 50000,
     width: 200,
     height: 200,
-    marginTop: -100,
+
     borderWidth: 5,
     borderColor: "white"
   },

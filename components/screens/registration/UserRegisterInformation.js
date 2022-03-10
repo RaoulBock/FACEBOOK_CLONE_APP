@@ -38,13 +38,15 @@ const UserRegisterInformation = () => {
         <View style={styles.formControl}>
           <Input
             placeholder="First name"
-            onChangeText={(name) => setFirstName(name)}
+            onChangeText={() => setFirstName(firstName)}
+            value={firstName}
           />
         </View>
         <View style={styles.formControl}>
           <Input
             placeholder="Last name"
-            onChangeText={(lastname) => setLastName(lastname)}
+            onChangeText={(lastName) => setLastName(lastName)}
+            value={lastName}
           />
         </View>
       </View>
