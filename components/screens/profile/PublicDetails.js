@@ -1,9 +1,34 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React, { useContext } from "react";
 import ProfileHeader from "../../headers/ProfileHeader";
-import { APP_PAGES, HEADER_HEIGHT } from "../../../context/settings";
+import {
+  APP_PAGES,
+  HEADER_HEIGHT,
+  APP_ICONS,
+  APP_STYLE
+} from "../../../context/settings";
 
 import { AppContext, AppProvider } from "../../../context/AppProvider";
+
+const ProfileImageViewer = () => {
+  console.log(profilePicture, "clicked");
+};
+
+const UserProfilePicture = async () => {
+  // No permissions request is necessary for launching the image library
+  let Profileresult = await ImagePicker.launchImageLibraryAsync({
+    mediaTypes: ImagePicker.MediaTypeOptions.All,
+    allowsEditing: true,
+    aspect: [4, 3],
+    quality: 1
+  });
+
+  console.log(Profileresult);
+
+  if (!Profileresult.cancelled) {
+    setProfilePicture(Profileresult.uri);
+  }
+};
 
 const PublicDetails = () => {
   const {
@@ -38,6 +63,43 @@ const PublicDetails = () => {
       >
         <ProfileHeader onPress={() => setNavPage(APP_PAGES.PROFILE)} />
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+            Profile Picture
+          </Text>
+          <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+            Edit
+          </Text>
+        </View>
+        <View>
+          {profilePicture === null ? (
+            <Image
+              source={require("../../../assets/defaultProfilePicture.jpg")}
+              style={styles.userProfilePicture}
+              onPress={() => console.log("clicked")}
+            />
+          ) : (
+            <TouchableOpacity onPress={ProfileImageViewer}>
+              <Image
+                source={{ uri: profilePicture }}
+                style={styles.EditUserProfilePicture}
+              />
+            </TouchableOpacity>
+          )}
+          <TouchableOpacity
+            style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}
+            onPress={UserProfilePicture}
+          >
+            {APP_ICONS.CAMERA}
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -45,4 +107,4 @@ const PublicDetails = () => {
 
 export default PublicDetails;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create(APP_STYLE);

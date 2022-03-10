@@ -186,6 +186,14 @@ export const APP_STYLE = {
     borderWidth: 5,
     borderColor: "white"
   },
+  EditUserProfilePicture: {
+    borderRadius: 50000,
+    width: 200,
+    height: 200,
+    borderWidth: 5,
+    borderColor: "white",
+    marginLeft: 100
+  },
   userCoverPicture: {
     width: "100%",
     height: 400,

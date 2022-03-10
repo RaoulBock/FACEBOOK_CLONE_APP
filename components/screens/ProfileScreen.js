@@ -8,14 +8,15 @@ import {
   StatusBar,
   TouchableOpacity
 } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import Input from "../generic/Input";
-import { APP_ICONS, APP_STYLE } from "../../context/settings";
+import { APP_ICONS, APP_STYLE, APP_PAGES } from "../../context/settings";
 import ProfileHeader from "../headers/ProfileHeader";
 import UserProfileHeader from "../headers/UserProfileHeader";
 import Button from "../generic/Button";
 import UserProfileInformation from "../headers/UserProfileInformation";
 import UserProfileFriends from "../headers/UserProfileFriends";
+import { AppContext } from "../../context/AppProvider";
 
 const images = [
   {
@@ -40,6 +41,7 @@ const HEADER_HEIGHT =
   Platform.OS === "ios" ? 115 : 70 + StatusBar.currentHeight;
 
 const ProfileScreen = () => {
+  const { navPage, setNavPage } = useContext(AppContext);
   return (
     <View>
       <View
