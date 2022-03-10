@@ -30,6 +30,22 @@ const UserProfilePicture = async () => {
   }
 };
 
+const UserCoverPicture = async () => {
+  // No permissions request is necessary for launching the image library
+  let result = await ImagePicker.launchImageLibraryAsync({
+    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    allowsEditing: true,
+    aspect: [3, 4],
+    quality: 1
+  });
+
+  console.log(result);
+
+  if (!result.cancelled) {
+    setCoverPicture(result.uri);
+  }
+};
+
 const PublicDetails = () => {
   const {
     navPage,
@@ -63,42 +79,78 @@ const PublicDetails = () => {
       >
         <ProfileHeader onPress={() => setNavPage(APP_PAGES.PROFILE)} />
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: 12
-          }}
-        >
-          <Text style={{ fontWeight: "bold", fontSize: 20 }}>
-            Profile Picture
-          </Text>
-          <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-            Edit
-          </Text>
-        </View>
         <View>
-          {profilePicture === null ? (
-            <Image
-              source={require("../../../assets/defaultProfilePicture.jpg")}
-              style={styles.userProfilePicture}
-              onPress={() => console.log("clicked")}
-            />
-          ) : (
-            <TouchableOpacity onPress={ProfileImageViewer}>
-              <Image
-                source={{ uri: profilePicture }}
-                style={styles.EditUserProfilePicture}
-              />
-            </TouchableOpacity>
-          )}
-          <TouchableOpacity
-            style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}
-            onPress={UserProfilePicture}
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              margin: 12
+            }}
           >
-            {APP_ICONS.CAMERA}
-          </TouchableOpacity>
+            <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+              Profile Picture
+            </Text>
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          </View>
+          <View>
+            {profilePicture === null ? (
+              <Image
+                source={require("../../../assets/defaultProfilePicture.jpg")}
+                style={styles.EditUserProfilePicture}
+                onPress={() => console.log("clicked")}
+              />
+            ) : (
+              <TouchableOpacity onPress={ProfileImageViewer}>
+                <Image
+                  source={{ uri: profilePicture }}
+                  style={styles.EditUserProfilePicture}
+                />
+              </TouchableOpacity>
+            )}
+            <TouchableOpacity
+              style={{ alignItems: "center", marginTop: -50, marginLeft: 100 }}
+              onPress={UserProfilePicture}
+            >
+              {APP_ICONS.CAMERA}
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+        <View>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              margin: 12
+            }}
+          >
+            <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+              Cover Picture
+            </Text>
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          </View>
+          <View>
+            {coverPicture === null ? (
+              <Image
+                source={require("../../../assets/wallpaper.jpg")}
+                style={{ height: 400 }}
+              />
+            ) : (
+              <Image source={{ uri: coverPicture }} style={{ height: 400 }} />
+            )}
+            <TouchableOpacity
+              style={{ alignItems: "center", marginTop: -50, marginLeft: 350 }}
+              onPress={UserCoverPicture}
+            >
+              {APP_ICONS.CAMERA}
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
