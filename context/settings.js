@@ -153,6 +153,15 @@ export const APP_ICONS = {
         fontSize: 28
       }}
     />
+  ),
+  GLOBE: (
+    <Octicons
+      name="globe"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
   )
 };
 

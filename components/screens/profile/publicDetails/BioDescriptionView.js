@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput
+} from "react-native";
 import React, { useContext } from "react";
 
 import {
@@ -51,7 +58,37 @@ const BioDescriptionView = () => {
         onPressSave={() => console.log("Saved.")}
       />
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
-      <View></View>
+      <View style={{ marginLeft: 20, marginTop: 20 }}>
+        <TouchableOpacity
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <Image
+            source={{ uri: profilePicture }}
+            style={{ width: 60, height: 60, borderRadius: 500000 }}
+          />
+
+          <View style={{ marginLeft: 10 }}>
+            <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+              {firstName} {lastName}
+            </Text>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              {APP_ICONS.GLOBE}
+              <Text style={{ marginLeft: 5 }}>Public</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+      <View style={{ marginLeft: 20, marginRight: 20, marginTop: 15 }}>
+        <TextInput
+          style={{
+            borderWidth: 1,
+            borderColor: "#7B7B7C",
+            borderRadius: 8,
+            color: "black"
+          }}
+          placeholder="You can add a short bio to tell people more about yourself. This could be anything like a favroute quote or what makes you happy."
+        ></TextInput>
+      </View>
     </View>
   );
 };
