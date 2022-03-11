@@ -127,7 +127,9 @@ const PublicDetails = () => {
           </View>
         </View>
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.BIO)}
+        >
           <View>
             <View
               style={{
