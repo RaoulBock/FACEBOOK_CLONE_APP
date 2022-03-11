@@ -23,10 +23,6 @@ export const AppContext = React.createContext({
   setGender: (val) => {}
 });
 
-export const onSubmit = () => {
-  const registered = [firstName, lastName, email, phoneNumber, age, gender];
-};
-
 export const AppProvider = ({ children }) => {
   const [navPage, setNavPage] = useState(APP_PAGES.LOGIN);
   const [firstName, setFirstName] = useState("");

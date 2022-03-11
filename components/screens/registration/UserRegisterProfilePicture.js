@@ -7,6 +7,8 @@ import { AppContext, AppProvider } from "../../../context/AppProvider";
 
 import * as ImagePicker from "expo-image-picker";
 
+import axios from "axios";
+
 const UserRegisterProfilePicture = () => {
   const {
     navPage,
@@ -20,8 +22,27 @@ const UserRegisterProfilePicture = () => {
     phoneNumber,
     setPhoneNumber,
     profilePicture,
-    setProfilePicture
+    setProfilePicture,
+    age,
+    setAge,
+    gender,
+    setGender
   } = useContext(AppContext);
+
+  const onSubmit = () => {
+    const registered = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      age,
+      gender
+    };
+
+    axios
+      .post("http://localhost:4000/app/signup", registered)
+      .then((response) => console.log(response.data));
+  };
 
   const pickImage = async () => {
     // No permissions request is necessary for launching the image library
@@ -106,10 +127,7 @@ const UserRegisterProfilePicture = () => {
           </View>
         </View>
       </View>
-      <Button
-        title="Go to profile"
-        onPress={() => setNavPage(APP_PAGES.PROFILE)}
-      />
+      <Button title="Go to profile" onPress={onSubmit} />
     </View>
   );
 };
