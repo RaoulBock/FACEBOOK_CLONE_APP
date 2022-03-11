@@ -30,14 +30,7 @@ const UserRegisterProfilePicture = () => {
   } = useContext(AppContext);
 
   const onSubmit = () => {
-    const registered = {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      age,
-      gender
-    };
+    const registered = [firstName, lastName, email, phoneNumber, age, gender];
 
     axios
       .post("http://localhost:4000/app/signup", registered)
@@ -127,7 +120,10 @@ const UserRegisterProfilePicture = () => {
           </View>
         </View>
       </View>
-      <Button title="Go to profile" onPress={onSubmit} />
+      <Button
+        title="Go to profile"
+        onPress={() => setNavPage(APP_PAGES.PROFILE)}
+      />
     </View>
   );
 };

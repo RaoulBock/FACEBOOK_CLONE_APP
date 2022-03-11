@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
 import React, { useContext } from "react";
 import ProfileHeader from "../../headers/ProfileHeader";
 import {
@@ -76,8 +83,9 @@ const PublicDetails = () => {
           elevation: 1000,
           zIndex: 1000
         }}
-      >
-        <ProfileHeader onPress={() => setNavPage(APP_PAGES.PROFILE)} />
+      />
+      <ProfileHeader onPress={() => setNavPage(APP_PAGES.PROFILE)} />
+      <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
         <View>
           <View
@@ -119,23 +127,32 @@ const PublicDetails = () => {
           </View>
         </View>
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-        <View>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-              margin: 12
-            }}
-          >
-            <Text style={{ fontWeight: "bold", fontSize: 20 }}>Bio</Text>
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Add
-            </Text>
+        <TouchableOpacity>
+          <View>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                margin: 12
+              }}
+            >
+              <Text style={{ fontWeight: "bold", fontSize: 20 }}>Bio</Text>
+              <Text
+                style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}
+              >
+                Add
+              </Text>
+            </View>
+            <View style={{ alignItems: "center" }}>
+              <Text style={{ fontSize: 20, fontWeight: "400", color: "gray" }}>
+                Describe yourself...
+              </Text>
+            </View>
           </View>
-          <View></View>
-        </View>
-      </View>
+        </TouchableOpacity>
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      </ScrollView>
     </View>
   );
 };
