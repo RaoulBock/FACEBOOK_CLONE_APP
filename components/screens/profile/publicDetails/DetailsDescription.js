@@ -19,6 +19,7 @@ import { AppContext, AppProvider } from "../../../../context/AppProvider";
 
 import ProfileHeader from "../../../headers/ProfileHeader";
 import DefaultHeader from "../../../headers/DefaultHeader";
+import Button from "../../../generic/Button";
 
 const DetailsDescription = () => {
   const {
@@ -35,7 +36,9 @@ const DetailsDescription = () => {
     profilePicture,
     setProfilePicture,
     coverPicture,
-    setCoverPicture
+    setCoverPicture,
+    work,
+    setWork
   } = useContext(AppContext);
   return (
     <View>
@@ -45,7 +48,7 @@ const DetailsDescription = () => {
         textEvent="Save"
         onPressSave={() => console.log("Saved.")}
       />
-
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       <View style={{ marginLeft: 20, marginTop: 10 }}>
         <Text style={{ fontWeight: "bold", fontSize: 28 }}>
           Customize your information
@@ -53,7 +56,28 @@ const DetailsDescription = () => {
         <Text style={{ color: "gray" }}>Details you select will be public</Text>
       </View>
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
-      <View></View>
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Work</Text>
+          <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+            Add
+          </Text>
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {work === "" ? (
+            <Button title="Add Job" onPress={() => console.log("add job")} />
+          ) : (
+            { work }
+          )}
+        </View>
+      </View>
     </View>
   );
 };
