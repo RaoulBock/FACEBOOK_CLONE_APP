@@ -80,14 +80,21 @@ const BioDescriptionView = () => {
       </View>
       <View style={{ marginLeft: 20, marginRight: 20, marginTop: 15 }}>
         <TextInput
+          multiline
+          numberOfLines={4}
           style={{
             borderWidth: 1,
             borderColor: "#7B7B7C",
             borderRadius: 8,
-            color: "black"
+            color: "black",
+            padding: 8,
+            height: 100
           }}
           placeholder="You can add a short bio to tell people more about yourself. This could be anything like a favroute quote or what makes you happy."
-        ></TextInput>
+        />
+      </View>
+      <View style={{ marginLeft: 20, marginTop: 20, color: "gray" }}>
+        <Text>0 | 100</Text>
       </View>
     </View>
   );
