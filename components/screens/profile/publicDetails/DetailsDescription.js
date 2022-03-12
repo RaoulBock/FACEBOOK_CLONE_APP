@@ -78,7 +78,10 @@ const DetailsDescription = () => {
         </View>
         <View style={{ marginLeft: 20 }}>
           {work === "" ? (
-            <Button title="Add Job" onPress={() => console.log("add job")} />
+            <Button
+              title="Add Job"
+              onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+            />
           ) : (
             { work }
           )}

@@ -31,6 +31,9 @@ export const APP_PAGES = {
   PUBLIC_DETAILS: {
     BIO: "BIO",
     DETAILS: "DETAILS"
+  },
+  EDIT_DERAILS: {
+    WORK: "WORK"
   }
 };
 

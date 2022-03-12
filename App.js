@@ -16,6 +16,7 @@ import UserRegisterProfilePicture from "./components/screens/registration/UserRe
 import PublicDetails from "./components/screens/profile/PublicDetails";
 import BioDescriptionView from "./components/screens/profile/publicDetails/BioDescriptionView";
 import DetailsDescription from "./components/screens/profile/publicDetails/DetailsDescription";
+import AddWork from "./components/screens/profile/publicDetails/AddWork";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -48,6 +49,7 @@ const NavComp = () => {
         {navPage === APP_PAGES.USER_PROFILE_PUBLIC_DETAILS && <PublicDetails />}
         {navPage === APP_PAGES.PUBLIC_DETAILS.BIO && <BioDescriptionView />}
         {navPage === APP_PAGES.PUBLIC_DETAILS.DETAILS && <DetailsDescription />}
+        {navPage === APP_PAGES.EDIT_DERAILS.WORK && <AddWork />}
       </View>
     </SafeAreaView>
   );
