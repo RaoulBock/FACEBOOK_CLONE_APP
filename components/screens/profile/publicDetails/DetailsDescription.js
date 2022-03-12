@@ -66,9 +66,15 @@ const DetailsDescription = () => {
           }}
         >
           <Text style={{ fontWeight: "bold", fontSize: 20 }}>Work</Text>
-          <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-            Add
-          </Text>
+          {work === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          )}
         </View>
         <View style={{ marginLeft: 20 }}>
           {work === "" ? (

@@ -12,7 +12,7 @@ const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <View style={{ alignItems: "center", marginBottom: 30 }}>
-        <Text style={styles.LoginHeader}>FaceBook</Text>
+        <Text style={styles.LoginHeader}>Raoul's New FaceBook</Text>
       </View>
       <View>
         <View style={styles.formControl}>
