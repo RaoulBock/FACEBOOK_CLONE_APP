@@ -57,7 +57,7 @@ const BioDescriptionView = () => {
         textEvent="Save"
         onPressSave={() => console.log("Saved.")}
       />
-      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
+      {/* <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} /> */}
       <View style={{ marginLeft: 20, marginTop: 20 }}>
         <TouchableOpacity
           style={{ flexDirection: "row", alignItems: "center" }}
