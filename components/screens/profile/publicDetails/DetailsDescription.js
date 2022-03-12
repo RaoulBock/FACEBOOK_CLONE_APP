@@ -41,10 +41,19 @@ const DetailsDescription = () => {
     <View>
       <DefaultHeader
         onPress={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
-        text="Edit Bio"
+        text="Edit Details"
         textEvent="Save"
         onPressSave={() => console.log("Saved.")}
       />
+
+      <View style={{ marginLeft: 20, marginTop: 10 }}>
+        <Text style={{ fontWeight: "bold", fontSize: 28 }}>
+          Customize your information
+        </Text>
+        <Text style={{ color: "gray" }}>Details you select will be public</Text>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
+      <View></View>
     </View>
   );
 };
