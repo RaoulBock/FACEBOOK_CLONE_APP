@@ -154,6 +154,82 @@ const PublicDetails = () => {
           </View>
         </TouchableOpacity>
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+        <TouchableOpacity
+          onPress={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.BIO)}
+        >
+          <View>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                margin: 12
+              }}
+            >
+              <Text style={{ fontWeight: "bold", fontSize: 20 }}>Details</Text>
+              <Text
+                style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}
+              >
+                Edit
+              </Text>
+            </View>
+            <View style={{}}>
+              <TouchableOpacity style={{ padding: 8, marginLeft: 20 }}>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center"
+                  }}
+                >
+                  {APP_ICONS.SCHOOL}
+                  <Text style={styles.userInformation}>
+                    Went to Windhoek International School
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center"
+                  }}
+                >
+                  {APP_ICONS.LOCATION}
+                  <Text style={styles.userInformation}>
+                    From Windhoek, Namibia
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center"
+                  }}
+                >
+                  {APP_ICONS.HEART}
+                  <Text style={styles.userInformation}>Single</Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center"
+                  }}
+                >
+                  {APP_ICONS.CALENDER}
+                  <Text style={styles.userInformation}>Joined August 2013</Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center"
+                  }}
+                >
+                  {APP_ICONS.HORIZONTALDOTS}
+                  <Text style={styles.userInformation}>
+                    See your about information
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
