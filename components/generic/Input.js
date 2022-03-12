@@ -12,6 +12,7 @@ const Input = (props) => {
         onChangeText={props.onChangeText}
         onPress={props.onPress}
         keyboardType={props.keyboardType}
+        value={props.value}
       />
     </View>
   );

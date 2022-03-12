@@ -21,7 +21,9 @@ const UserProfileInformation = () => {
     profilePicture,
     setProfilePicture,
     coverPicture,
-    setCoverPicture
+    setCoverPicture,
+    work,
+    setWork
   } = useContext(AppContext);
   return (
     <View>
@@ -33,9 +35,13 @@ const UserProfileInformation = () => {
           }}
         >
           {APP_ICONS.SCHOOL}
-          <Text style={styles.userInformation}>
-            Went to Windhoek International School
-          </Text>
+          {work === "" ? (
+            <Text style={styles.userInformation}>
+              Went to Windhoek International School
+            </Text>
+          ) : (
+            <Text style={styles.userInformation}>{work}</Text>
+          )}
         </View>
         <View
           style={{
