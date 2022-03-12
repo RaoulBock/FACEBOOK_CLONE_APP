@@ -154,9 +154,7 @@ const PublicDetails = () => {
           </View>
         </TouchableOpacity>
         <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-        <TouchableOpacity
-          onPress={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.BIO)}
-        >
+        <TouchableOpacity>
           <View>
             <View
               style={{
@@ -174,7 +172,10 @@ const PublicDetails = () => {
               </Text>
             </View>
             <View style={{}}>
-              <TouchableOpacity style={{ padding: 8, marginLeft: 20 }}>
+              <TouchableOpacity
+                style={{ padding: 8, marginLeft: 20 }}
+                onPress={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.DETAILS)}
+              >
                 <View
                   style={{
                     flexDirection: "row",
@@ -230,6 +231,7 @@ const PublicDetails = () => {
             </View>
           </View>
         </TouchableOpacity>
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       </ScrollView>
     </View>
   );
