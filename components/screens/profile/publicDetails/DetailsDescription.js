@@ -83,7 +83,69 @@ const DetailsDescription = () => {
               onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
             />
           ) : (
-            { work }
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>{work}</Text>
+            </View>
+          )}
+        </View>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Education</Text>
+          {work === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          )}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {work === "" ? (
+            <View>
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>{work}</Text>
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
           )}
         </View>
       </View>

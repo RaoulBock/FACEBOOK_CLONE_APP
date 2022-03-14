@@ -34,7 +34,10 @@ const UserRegisterProfilePicture = () => {
 
     axios
       .post("http://localhost:4000/app/signup", registered)
-      .then((response) => console.log(response.data));
+      .then((response) => console.log(response.data))
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const pickImage = async () => {

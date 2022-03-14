@@ -32,7 +32,7 @@ const AddWork = () => {
         onPress={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
         text="Add work"
         textEvent="Save"
-        onPressSave={() => setWork(work)}
+        onPressSave={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
       />
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       <View
@@ -47,7 +47,7 @@ const AddWork = () => {
       >
         <Text>{APP_ICONS.BRIEFCASE}</Text>
         <Input
-          placeholder="Workplace Name"
+          placeholder="Workplace Name | School Name"
           onChangeText={(work) => setWork(work)}
         />
       </View>

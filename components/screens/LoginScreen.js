@@ -16,7 +16,7 @@ const LoginScreen = () => {
       </View>
       <View>
         <View style={styles.formControl}>
-          <Input placeholder="Username, Someone@something.com" />
+          <Input placeholder="Username, Phone number, Someone@something.com" />
         </View>
         <View style={styles.formControl}>
           <Input placeholder="••••••••" />

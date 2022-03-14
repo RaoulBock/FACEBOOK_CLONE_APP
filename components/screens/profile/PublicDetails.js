@@ -186,9 +186,7 @@ const PublicDetails = () => {
                 >
                   {APP_ICONS.SCHOOL}
                   {work === "" ? (
-                    <Text style={styles.userInformation}>
-                      Went to Windhoek International School
-                    </Text>
+                    <Text style={styles.userInformation}>Went to ...</Text>
                   ) : (
                     <Text style={styles.userInformation}>{work}</Text>
                   )}
