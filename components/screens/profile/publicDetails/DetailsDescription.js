@@ -127,7 +127,7 @@ const DetailsDescription = () => {
                 onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
               />
               <Button
-                title="Add a high school"
+                title="Add a college"
                 onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
               />
             </View>

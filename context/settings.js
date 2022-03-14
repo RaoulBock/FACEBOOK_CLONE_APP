@@ -34,7 +34,16 @@ export const APP_PAGES = {
   },
   EDIT_DERAILS: {
     WORK: "WORK"
-  }
+  },
+  EDUCATION: {
+    HIGH_SCHOOL: "HIGH_SCHOOL",
+    COLLEGE: "COLLEGE"
+  },
+  LOCATION: {
+    CURRENT_CITY: "CURRENT_CITY",
+    HOMETOWN: "HOMETOWN"
+  },
+  RELATIONSHIP: "RELATIONSHIP"
 };
 
 export const APP_ICONS = {
