@@ -22,7 +22,9 @@ export const AppContext = React.createContext({
   gender: "",
   setGender: (val) => {},
   work: "",
-  setWork: (val) => {}
+  setWork: (val) => {},
+  education: "",
+  setEducation: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -36,6 +38,7 @@ export const AppProvider = ({ children }) => {
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [work, setWork] = useState("");
+  const [education, setEducation] = useState("");
 
   return (
     <AppContext.Provider
@@ -59,7 +62,9 @@ export const AppProvider = ({ children }) => {
         age,
         setAge,
         work,
-        setWork
+        setWork,
+        education,
+        setEducation
       }}
     >
       {children}

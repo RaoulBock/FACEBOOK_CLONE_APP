@@ -4,9 +4,10 @@ import {
   View,
   TouchableOpacity,
   Image,
-  TextInput
+  TextInput,
+  CheckBox
 } from "react-native";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import {
   APP_PAGES,
@@ -40,6 +41,8 @@ const DetailsDescription = () => {
     work,
     setWork
   } = useContext(AppContext);
+
+  const [isSelected, setSelection] = useState(false);
   return (
     <View>
       <DefaultHeader
@@ -143,6 +146,156 @@ const DetailsDescription = () => {
               />
               <Button
                 title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          )}
+        </View>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Current City</Text>
+          {work === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          )}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {work === "" ? (
+            <View>
+              <Button
+                title="Add current city"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>{work}</Text>
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+              <Button
+                title="Add college"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          )}
+        </View>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Hometown</Text>
+          {work === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          )}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {work === "" ? (
+            <View>
+              <Button
+                title="Add current city"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>{work}</Text>
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+              <Button
+                title="Add college"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          )}
+        </View>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Relationship</Text>
+          {work === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit
+            </Text>
+          )}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {work === "" ? (
+            <View>
+              <Button
+                title="Add current city"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>{work}</Text>
+              <Button
+                title="Add a high school"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+              <Button
+                title="Add college"
                 onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
               />
             </View>
