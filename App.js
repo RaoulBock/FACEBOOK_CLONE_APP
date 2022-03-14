@@ -17,6 +17,7 @@ import PublicDetails from "./components/screens/profile/PublicDetails";
 import BioDescriptionView from "./components/screens/profile/publicDetails/BioDescriptionView";
 import DetailsDescription from "./components/screens/profile/publicDetails/DetailsDescription";
 import AddWork from "./components/screens/profile/publicDetails/AddWork";
+import EducationHighSchoolInformation from "./components/screens/profile/publicDetails/EducationHighSchoolInformation";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -50,6 +51,9 @@ const NavComp = () => {
         {navPage === APP_PAGES.PUBLIC_DETAILS.BIO && <BioDescriptionView />}
         {navPage === APP_PAGES.PUBLIC_DETAILS.DETAILS && <DetailsDescription />}
         {navPage === APP_PAGES.EDIT_DERAILS.WORK && <AddWork />}
+        {navPage === APP_PAGES.EDUCATION.HIGH_SCHOOL && (
+          <EducationHighSchoolInformation />
+        )}
       </View>
     </SafeAreaView>
   );

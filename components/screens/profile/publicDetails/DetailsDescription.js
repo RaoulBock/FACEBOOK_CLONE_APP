@@ -124,11 +124,11 @@ const DetailsDescription = () => {
             <View>
               <Button
                 title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+                onPress={() => setNavPage(APP_PAGES.EDUCATION.HIGH_SCHOOL)}
               />
               <Button
                 title="Add a college"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+                onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
               />
             </View>
           ) : (
