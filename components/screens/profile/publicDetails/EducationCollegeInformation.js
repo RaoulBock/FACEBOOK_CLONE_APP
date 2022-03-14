@@ -31,7 +31,7 @@ const EducationCollegeInformation = () => {
         text="Add college"
         onPress={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.DETAILS)}
         textEvent="Save"
-        onPressSave={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
+        onPressSave={() => setNavPage(APP_PAGES.PUBLIC_DETAILS.DETAILS)}
       />
     </View>
   );
