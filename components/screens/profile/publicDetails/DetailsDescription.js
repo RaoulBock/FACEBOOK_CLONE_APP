@@ -4,8 +4,7 @@ import {
   View,
   TouchableOpacity,
   Image,
-  TextInput,
-  CheckBox
+  TextInput
 } from "react-native";
 import React, { useContext, useState } from "react";
 
@@ -39,7 +38,17 @@ const DetailsDescription = () => {
     coverPicture,
     setCoverPicture,
     work,
-    setWork
+    setWork,
+    education,
+    setEducation,
+    college,
+    setCollege,
+    currentCity,
+    setCurrentCity,
+    homeTown,
+    setHomeTown,
+    relationShip,
+    setRelationShip
   } = useContext(AppContext);
 
   const [isSelected, setSelection] = useState(false);
@@ -73,11 +82,7 @@ const DetailsDescription = () => {
             <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
               Add
             </Text>
-          ) : (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
-            </Text>
-          )}
+          ) : null}
         </View>
         <View style={{ marginLeft: 20 }}>
           {work === "" ? (
@@ -90,219 +95,24 @@ const DetailsDescription = () => {
               style={{
                 flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "space-between",
+                marginRight: 20
               }}
             >
-              <Text>{work}</Text>
+              <TouchableOpacity></TouchableOpacity>
+              <Text style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}>
+                {work}
+              </Text>
               <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
             </View>
           )}
+          <Button
+            title="Add Job"
+            onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+          />
         </View>
       </View>
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-      <View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: 12
-          }}
-        >
-          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Education</Text>
-          {work === "" ? (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Add
-            </Text>
-          ) : (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
-            </Text>
-          )}
-        </View>
-        <View style={{ marginLeft: 20 }}>
-          {work === "" ? (
-            <View>
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDUCATION.HIGH_SCHOOL)}
-              />
-              <Button
-                title="Add a college"
-                onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
-              />
-            </View>
-          ) : (
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <Text>{work}</Text>
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          )}
-        </View>
-      </View>
-      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-      <View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: 12
-          }}
-        >
-          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Current City</Text>
-          {work === "" ? (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Add
-            </Text>
-          ) : (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
-            </Text>
-          )}
-        </View>
-        <View style={{ marginLeft: 20 }}>
-          {work === "" ? (
-            <View>
-              <Button
-                title="Add current city"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          ) : (
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <Text>{work}</Text>
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-              <Button
-                title="Add college"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          )}
-        </View>
-      </View>
-      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-      <View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: 12
-          }}
-        >
-          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Hometown</Text>
-          {work === "" ? (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Add
-            </Text>
-          ) : (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
-            </Text>
-          )}
-        </View>
-        <View style={{ marginLeft: 20 }}>
-          {work === "" ? (
-            <View>
-              <Button
-                title="Add current city"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          ) : (
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <Text>{work}</Text>
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-              <Button
-                title="Add college"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          )}
-        </View>
-      </View>
-      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
-      <View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: 12
-          }}
-        >
-          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Relationship</Text>
-          {work === "" ? (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Add
-            </Text>
-          ) : (
-            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
-              Edit
-            </Text>
-          )}
-        </View>
-        <View style={{ marginLeft: 20 }}>
-          {work === "" ? (
-            <View>
-              <Button
-                title="Add current city"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          ) : (
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <Text>{work}</Text>
-              <Button
-                title="Add a high school"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-              <Button
-                title="Add college"
-                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-              />
-            </View>
-          )}
-        </View>
-      </View>
     </View>
   );
 };

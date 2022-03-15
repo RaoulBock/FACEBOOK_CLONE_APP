@@ -24,7 +24,15 @@ export const AppContext = React.createContext({
   work: "",
   setWork: (val) => {},
   education: "",
-  setEducation: (val) => {}
+  setEducation: (val) => {},
+  college: "",
+  setCollege: (val) => {},
+  currentCity: "",
+  setCurrentCity: (val) => {},
+  homeTown: "",
+  setHomeTown: (val) => {},
+  relationShip: "",
+  setRelationShip: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -39,6 +47,10 @@ export const AppProvider = ({ children }) => {
   const [age, setAge] = useState("");
   const [work, setWork] = useState("");
   const [education, setEducation] = useState("");
+  const [college, setCollege] = useState("");
+  const [currentCity, setCurrentCity] = useState("");
+  const [homeTown, setHomeTown] = useState("");
+  const [relationShip, setRelationShip] = useState("");
 
   return (
     <AppContext.Provider
@@ -64,7 +76,15 @@ export const AppProvider = ({ children }) => {
         work,
         setWork,
         education,
-        setEducation
+        setEducation,
+        college,
+        setCollege,
+        currentCity,
+        setCurrentCity,
+        homeTown,
+        setHomeTown,
+        relationShip,
+        setRelationShip
       }}
     >
       {children}
