@@ -11,7 +11,8 @@ import {
   MaterialIcons,
   Octicons,
   Entypo,
-  Feather
+  Feather,
+  MaterialCommunityIcons
 } from "react-native-vector-icons";
 
 const HEADER_HEIGHT =
@@ -170,6 +171,15 @@ export const APP_ICONS = {
   GLOBE: (
     <Octicons
       name="globe"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  PENCIL: (
+    <MaterialCommunityIcons
+      name="pencil"
       style={{
         color: "gray",
         fontSize: 18

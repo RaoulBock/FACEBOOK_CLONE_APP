@@ -94,6 +94,7 @@ const DetailsDescription = () => {
               }}
             >
               <Text>{work}</Text>
+              <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
             </View>
           )}
         </View>
