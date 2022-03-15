@@ -131,7 +131,11 @@ const DetailsDescription = () => {
             <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
               Add
             </Text>
-          ) : null}
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit | Add
+            </Text>
+          )}
         </View>
         <View style={{ marginLeft: 20 }}>
           {education === "" ? (
@@ -140,6 +144,13 @@ const DetailsDescription = () => {
                 title="Add high school"
                 onPress={() => setNavPage(APP_PAGES.EDUCATION.HIGH_SCHOOL)}
               />
+              <Button
+                title="Add college"
+                onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
+              />
+            </View>
+          ) : college === "" ? (
+            <View>
               <Button
                 title="Add college"
                 onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
@@ -155,10 +166,26 @@ const DetailsDescription = () => {
               }}
             >
               <TouchableOpacity></TouchableOpacity>
-              <Text style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}>
-                {education}
-              </Text>
-              <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
+              <View>
+                <Text
+                  style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}
+                >
+                  <Text>{APP_ICONS.SCHOOL}</Text>
+                  {education}
+                  <TouchableOpacity style={{ marginLeft: 20 }}>
+                    {APP_ICONS.PENCIL}
+                  </TouchableOpacity>
+                </Text>
+                <Text
+                  style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}
+                >
+                  {college}
+                  <TouchableOpacity style={{ margibLeft: 20 }}>
+                    {APP_ICONS.PENCIL}
+                  </TouchableOpacity>
+                </Text>
+              </View>
+              <Text></Text>
             </View>
           )}
         </View>
