@@ -81,7 +81,7 @@ const NewStatusView = () => {
           placeholder="Whats on your mind?"
         />
       </View>
-      <View style={{}}>
+      <View style={{ marginTop: 50 }}>
         <TouchableOpacity
           style={{
             padding: 15,
@@ -103,7 +103,7 @@ const NewStatusView = () => {
             alignItems: "center"
           }}
         >
-          <Text>{APP_ICONS.PHOTO}</Text>
+          <Text>{APP_ICONS.COMMUNITY}</Text>
           <Text style={{ marginLeft: 20 }}>Tag</Text>
         </TouchableOpacity>
       </View>
