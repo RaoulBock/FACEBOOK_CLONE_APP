@@ -12,7 +12,8 @@ import {
   Octicons,
   Entypo,
   Feather,
-  MaterialCommunityIcons
+  MaterialCommunityIcons,
+  AntDesign
 } from "react-native-vector-icons";
 
 const HEADER_HEIGHT =
@@ -180,6 +181,15 @@ export const APP_ICONS = {
   PENCIL: (
     <MaterialCommunityIcons
       name="pencil"
+      style={{
+        color: "gray",
+        fontSize: 18
+      }}
+    />
+  ),
+  PHOTO: (
+    <AntDesign
+      name="picture"
       style={{
         color: "gray",
         fontSize: 18

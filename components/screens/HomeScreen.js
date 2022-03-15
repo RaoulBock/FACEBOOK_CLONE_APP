@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, StatusBar } from "react-native";
 import React from "react";
 
 import HomeHeader from "../headers/HomeHeader";
+import HomeStatusBar from "../headers/HomeStatusBar";
 
 const HEADER_HEIGHT =
   Platform.OS === "ios" ? 115 : 70 + StatusBar.currentHeight;
@@ -11,17 +12,15 @@ const HomeScreen = () => {
     <View>
       <View
         style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          top: 0,
-          height: HEADER_HEIGHT,
           backgroundColor: "#fff",
           elevation: 1000,
           zIndex: 1000
         }}
       >
-        <HomeHeader />
+        <View>
+          <HomeHeader />
+          <HomeStatusBar />
+        </View>
       </View>
     </View>
   );
