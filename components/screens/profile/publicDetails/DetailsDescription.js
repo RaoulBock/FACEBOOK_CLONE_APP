@@ -151,6 +151,29 @@ const DetailsDescription = () => {
             </View>
           ) : college === "" ? (
             <View>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginRight: 20
+                }}
+              >
+                <TouchableOpacity></TouchableOpacity>
+                <View style={{}}>
+                  <Text
+                    style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}
+                  >
+                    <Text>{APP_ICONS.SCHOOL}</Text>
+                    {education}
+                    <TouchableOpacity style={{ marginLeft: 20 }}>
+                      {APP_ICONS.PENCIL}
+                    </TouchableOpacity>
+                  </Text>
+                  <Text></Text>
+                </View>
+                <Text></Text>
+              </View>
               <Button
                 title="Add college"
                 onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
@@ -179,8 +202,9 @@ const DetailsDescription = () => {
                 <Text
                   style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}
                 >
+                  <Text>{APP_ICONS.SCHOOL}</Text>
                   {college}
-                  <TouchableOpacity style={{ margibLeft: 20 }}>
+                  <TouchableOpacity style={{ marginLeft: 20 }}>
                     {APP_ICONS.PENCIL}
                   </TouchableOpacity>
                 </Text>
