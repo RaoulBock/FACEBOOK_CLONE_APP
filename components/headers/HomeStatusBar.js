@@ -54,14 +54,6 @@ const HomeStatusBar = () => {
         </TouchableOpacity>
         <TouchableOpacity>{APP_ICONS.PHOTO}</TouchableOpacity>
       </View>
-
-      <View
-        style={{
-          borderWidth: 1,
-          borderColor: "#eee",
-          marginTop: 10
-        }}
-      />
     </View>
   );
 };

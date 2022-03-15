@@ -27,11 +27,12 @@ const NewStatusView = () => {
   return (
     <View>
       <DefaultHeader
-        onPress={() => setNavPage(APP_PAGES.USER_PROFILE_PUBLIC_DETAILS)}
+        onPress={() => setNavPage(APP_PAGES.HOME)}
         text="Create post"
         textEvent="Post"
-        onPressSave={() => console.log("Saved.")}
+        onPressSave={() => console.log("Post.")}
       />
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
     </View>
   );
 };

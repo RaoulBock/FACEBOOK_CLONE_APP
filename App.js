@@ -19,6 +19,7 @@ import DetailsDescription from "./components/screens/profile/publicDetails/Detai
 import AddWork from "./components/screens/profile/publicDetails/AddWork";
 import EducationHighSchoolInformation from "./components/screens/profile/publicDetails/EducationHighSchoolInformation";
 import EducationCollegeInformation from "./components/screens/profile/publicDetails/EducationCollegeInformation";
+import NewStatusView from "./components/screens/home/NewStatusView";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -58,6 +59,7 @@ const NavComp = () => {
         {navPage === APP_PAGES.EDUCATION.COLLEGE && (
           <EducationCollegeInformation />
         )}
+        {navPage === APP_PAGES.NEW_STATUS && <NewStatusView />}
       </View>
     </SafeAreaView>
   );
