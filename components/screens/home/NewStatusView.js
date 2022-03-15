@@ -32,7 +32,6 @@ const NewStatusView = () => {
     setCoverPicture
   } = useContext(AppContext);
 
-  const [value, onChangeText] = React.useState("Useless Multiline Placeholder");
   return (
     <View>
       <DefaultHeader
@@ -64,7 +63,7 @@ const NewStatusView = () => {
       </View>
       <View
         style={{
-          marginTop: 20,
+          marginTop: 10,
           marginLeft: 20,
           marginRight: 20
         }}
@@ -72,8 +71,8 @@ const NewStatusView = () => {
         <TextInput
           multiline
           numberOfLines={4}
-          onChangeText={(text) => onChangeText(text)}
-          value={value}
+          //   onChangeText={(text) => onChangeText(text)}
+          //   value={value}
           style={{
             padding: 10,
             fontSize: 28,
@@ -83,9 +82,29 @@ const NewStatusView = () => {
         />
       </View>
       <View style={{}}>
-        <TouchableOpacity>
-          {APP_ICONS.PHOTO}
-          <Text>Photo/Video</Text>
+        <TouchableOpacity
+          style={{
+            padding: 15,
+            borderWidth: 1,
+            borderColor: "#eee",
+            flexDirection: "row",
+            alignItems: "center"
+          }}
+        >
+          <Text>{APP_ICONS.PHOTO}</Text>
+          <Text style={{ marginLeft: 20 }}>Photo/Video</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            padding: 15,
+            borderWidth: 1,
+            borderColor: "#eee",
+            flexDirection: "row",
+            alignItems: "center"
+          }}
+        >
+          <Text>{APP_ICONS.PHOTO}</Text>
+          <Text style={{ marginLeft: 20 }}>Tag</Text>
         </TouchableOpacity>
       </View>
     </View>
