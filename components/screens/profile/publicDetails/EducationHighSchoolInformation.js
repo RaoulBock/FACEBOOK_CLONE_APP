@@ -24,7 +24,17 @@ const EducationHighSchoolInformation = () => {
     coverPicture,
     setCoverPicture,
     work,
-    setWork
+    setWork,
+    education,
+    setEducation,
+    college,
+    setCollege,
+    currentCity,
+    setCurrentCity,
+    homeTown,
+    setHomeTown,
+    relationShip,
+    setRelationShip
   } = useContext(AppContext);
   return (
     <View>
@@ -44,7 +54,10 @@ const EducationHighSchoolInformation = () => {
         }}
       >
         <View style={{ fontSize: 78 }}>{APP_ICONS.SCHOOL}</View>
-        <Input placeholder="High School Name (Required)" />
+        <Input
+          placeholder="High School Name (Required)"
+          onChangeText={(education) => setEducation(education)}
+        />
       </View>
       <View
         style={{

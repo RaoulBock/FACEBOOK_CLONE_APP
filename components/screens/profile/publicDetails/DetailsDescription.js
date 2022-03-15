@@ -82,7 +82,11 @@ const DetailsDescription = () => {
             <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
               Add
             </Text>
-          ) : null}
+          ) : (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Edit | Add
+            </Text>
+          )}
         </View>
         <View style={{ marginLeft: 20 }}>
           {work === "" ? (
@@ -99,24 +103,113 @@ const DetailsDescription = () => {
                 marginRight: 20
               }}
             >
+              <TouchableOpacity style={{ color: "#1dd1a1" }}>
+                <Text
+                  style={{ color: "#1dd1a1", fontWeight: "bold", fontSize: 40 }}
+                >
+                  •
+                </Text>
+              </TouchableOpacity>
+              <Text style={{ fontWeight: "200", fontSize: 18 }}>{work}</Text>
+              <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
+            </View>
+          )}
+        </View>
+      </View>
+      <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Education</Text>
+          {education === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : null}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {education === "" ? (
+            <View>
+              <Button
+                title="Add high school"
+                onPress={() => setNavPage(APP_PAGES.EDUCATION.HIGH_SCHOOL)}
+              />
+              <Button
+                title="Add college"
+                onPress={() => setNavPage(APP_PAGES.EDUCATION.COLLEGE)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginRight: 20
+              }}
+            >
               <TouchableOpacity></TouchableOpacity>
               <Text style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}>
-                {work}
+                {education}
               </Text>
               <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
             </View>
           )}
-          <Button
-            title="Add Job"
-            onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
-          />
         </View>
       </View>
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 20 }} />
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: 12
+          }}
+        >
+          <Text style={{ fontWeight: "bold", fontSize: 20 }}>Current city</Text>
+          {currentCity === "" ? (
+            <Text style={{ fontWeight: "300", fontSize: 18, color: "#40739e" }}>
+              Add
+            </Text>
+          ) : null}
+        </View>
+        <View style={{ marginLeft: 20 }}>
+          {currentCity === "" ? (
+            <View>
+              <Button
+                title="Add current city"
+                onPress={() => setNavPage(APP_PAGES.EDIT_DERAILS.WORK)}
+              />
+            </View>
+          ) : (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginRight: 20
+              }}
+            >
+              <TouchableOpacity></TouchableOpacity>
+              <Text style={{ fontWeight: "200", fontSize: 18, marginTop: 10 }}>
+                {currentCity}
+              </Text>
+              <TouchableOpacity>{APP_ICONS.PENCIL}</TouchableOpacity>
+            </View>
+          )}
+        </View>
+      </View>
     </View>
   );
 };
 
 export default DetailsDescription;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create(APP_STYLE);
