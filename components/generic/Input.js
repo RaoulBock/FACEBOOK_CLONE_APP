@@ -13,6 +13,8 @@ const Input = (props) => {
         onPress={props.onPress}
         keyboardType={props.keyboardType}
         value={props.value}
+        maxLength={props.maxLength}
+        editable
       />
     </View>
   );
