@@ -47,9 +47,7 @@ const HomeScreen = () => {
         <View>
           <Text>
             {newStatus.map((a, i) => (
-              <Text key={i} style={{ marginTop: 20 }}>
-                {a}
-              </Text>
+              <Text key={i}>{a}</Text>
             ))}
           </Text>
         </View>
