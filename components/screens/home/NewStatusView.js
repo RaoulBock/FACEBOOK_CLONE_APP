@@ -42,7 +42,10 @@ const NewStatusView = () => {
         onPress={() => setNavPage(APP_PAGES.HOME)}
         text="Create post"
         textEvent="Post"
-        onPressSave={() => setNavPage(APP_PAGES.HOME)}
+        onPressSave={() =>
+          setNewStatus(() => [...newStatus, newStatus]) &&
+          setNavPage(APP_PAGES.HOME)
+        }
       />
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       <View style={{ marginLeft: 20, marginTop: 20 }}>
@@ -75,7 +78,7 @@ const NewStatusView = () => {
         <TextInput
           multiline
           numberOfLines={4}
-          onChangeText={(newStatus) => setNewStatus(newStatus)}
+          onChangeText={() => setNewStatus(() => [...newStatus, newStatus])}
           //   value={value}
           style={{
             padding: 10,
