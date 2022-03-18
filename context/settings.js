@@ -196,6 +196,15 @@ export const APP_ICONS = {
         fontSize: 18
       }}
     />
+  ),
+  SEARCH: (
+    <AntDesign
+      name="search1"
+      style={{
+        color: "gray",
+        fontSize: 28
+      }}
+    />
   )
 };
 

@@ -29,8 +29,12 @@ const NewStatusView = () => {
     profilePicture,
     setProfilePicture,
     coverPicture,
-    setCoverPicture
+    setCoverPicture,
+    newStatus,
+    setNewStatus
   } = useContext(AppContext);
+
+  console.log(newStatus);
 
   return (
     <View>
@@ -38,7 +42,7 @@ const NewStatusView = () => {
         onPress={() => setNavPage(APP_PAGES.HOME)}
         text="Create post"
         textEvent="Post"
-        onPressSave={() => console.log("Post.")}
+        onPressSave={() => setNavPage(APP_PAGES.HOME)}
       />
       <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       <View style={{ marginLeft: 20, marginTop: 20 }}>
@@ -71,7 +75,7 @@ const NewStatusView = () => {
         <TextInput
           multiline
           numberOfLines={4}
-          //   onChangeText={(text) => onChangeText(text)}
+          onChangeText={(newStatus) => setNewStatus(newStatus)}
           //   value={value}
           style={{
             padding: 10,

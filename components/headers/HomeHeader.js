@@ -9,43 +9,70 @@ const HomeHeader = () => {
   const { navPage, setNavPage } = useContext(AppContext);
 
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-around",
-        marginTop: 40,
-        borderBottomWidth: 1,
-        paddingBottom: 12,
-        borderColor: "#718093"
-      }}
-    >
-      <TouchableOpacity
-        style={[
-          navPage === APP_PAGES.HOME ? styles.isActive : styles.NotActive
-        ]}
-        onPress={() => setNavPage(APP_PAGES.HOME)}
+    <View>
+      <View
+        style={{
+          marginTop: 40,
+          marginLeft: 20,
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginRight: 20
+        }}
       >
-        {APP_ICONS.HOME}
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[
-          navPage === APP_PAGES.COMMUNITY ? styles.isActive : styles.NotActive
-        ]}
-        onPress={() => setNavPage(APP_PAGES.COMMUNITY)}
+        <Text style={{ fontWeight: "bold", color: "#4b7bec", fontSize: 38 }}>
+          Facebook
+        </Text>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center"
+          }}
+        >
+          <TouchableOpacity style={{ marginRight: 20 }}>
+            {APP_ICONS.SEARCH}
+          </TouchableOpacity>
+          <TouchableOpacity>{APP_ICONS.MESSAGE}</TouchableOpacity>
+        </View>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-around",
+          marginTop: 20,
+          borderBottomWidth: 1,
+          paddingBottom: 12,
+          borderColor: "#718093"
+        }}
       >
-        {APP_ICONS.COMMUNITY}
-      </TouchableOpacity>
-      <TouchableOpacity>{APP_ICONS.MESSAGE}</TouchableOpacity>
-      <TouchableOpacity>{APP_ICONS.BRIEFCASE}</TouchableOpacity>
-      <TouchableOpacity
-        style={[
-          navPage === APP_PAGES.SETTINGS ? styles.isActive : styles.NotActive
-        ]}
-        onPress={() => setNavPage(APP_PAGES.SETTINGS)}
-      >
-        {APP_ICONS.HORIZONTALDOTS}
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            navPage === APP_PAGES.HOME ? styles.isActive : styles.NotActive
+          ]}
+          onPress={() => setNavPage(APP_PAGES.HOME)}
+        >
+          {APP_ICONS.HOME}
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            navPage === APP_PAGES.COMMUNITY ? styles.isActive : styles.NotActive
+          ]}
+          onPress={() => setNavPage(APP_PAGES.COMMUNITY)}
+        >
+          {APP_ICONS.COMMUNITY}
+        </TouchableOpacity>
+
+        <TouchableOpacity>{APP_ICONS.BRIEFCASE}</TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            navPage === APP_PAGES.SETTINGS ? styles.isActive : styles.NotActive
+          ]}
+          onPress={() => setNavPage(APP_PAGES.SETTINGS)}
+        >
+          {APP_ICONS.HORIZONTALDOTS}
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

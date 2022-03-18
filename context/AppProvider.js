@@ -32,7 +32,9 @@ export const AppContext = React.createContext({
   homeTown: "",
   setHomeTown: (val) => {},
   relationShip: "",
-  setRelationShip: (val) => {}
+  setRelationShip: (val) => {},
+  newStatus: [],
+  setNewStatus: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -51,6 +53,8 @@ export const AppProvider = ({ children }) => {
   const [currentCity, setCurrentCity] = useState("");
   const [homeTown, setHomeTown] = useState("");
   const [relationShip, setRelationShip] = useState("");
+
+  const [newStatus, setNewStatus] = useState([]);
 
   return (
     <AppContext.Provider
@@ -84,7 +88,9 @@ export const AppProvider = ({ children }) => {
         homeTown,
         setHomeTown,
         relationShip,
-        setRelationShip
+        setRelationShip,
+        newStatus,
+        setNewStatus
       }}
     >
       {children}
