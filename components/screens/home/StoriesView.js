@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { APP_STYLE, APP_ICONS, APP_PAGES } from "../../../context/settings";
 
@@ -7,31 +7,13 @@ const StoriesView = () => {
     <View
       style={{
         width: "100%",
-        backgroundColor: "#ededed",
+        backgroundColor: "#eee",
         padding: 12,
         marginTop: 20
       }}
     >
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between"
-        }}
-      >
-        <Text
-          style={{
-            fontWeight: "700",
-            fontSize: 20,
-            marginLeft: 20,
-            color: "#4b7bec"
-          }}
-        >
-          Stories
-        </Text>
-        <TouchableOpacity style={{ marginRight: 20 }}>
-          <Text>See all</Text>
-        </TouchableOpacity>
+      <View>
+        <Text>Stories</Text>
       </View>
     </View>
   );

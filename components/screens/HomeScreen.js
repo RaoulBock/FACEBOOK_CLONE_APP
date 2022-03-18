@@ -44,16 +44,7 @@ const HomeScreen = () => {
         <View>
           <HomeHeader />
           <HomeStatusBar />
-        </View>
-        <View>
           <StoriesView />
-        </View>
-        <View>
-          <Text>
-            {newStatus.map((a, i) => (
-              <Text key={i}>{a}</Text>
-            ))}
-          </Text>
         </View>
       </View>
     </View>
