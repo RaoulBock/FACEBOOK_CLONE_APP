@@ -75,7 +75,7 @@ const NewStatusView = () => {
         <TextInput
           multiline
           numberOfLines={4}
-          onChangeText={() => setNewStatus([...newStatus, newStatus])}
+          onChangeText={() => setNewStatus([...newStatus])}
           //   value={value}
           style={{
             padding: 10,

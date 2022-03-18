@@ -7,6 +7,7 @@ import HomeStatusBar from "../headers/HomeStatusBar";
 import { AppContext, AppProvider } from "../../context/AppProvider";
 
 import { APP_PAGES, APP_ICONS, APP_STYLE } from "../../context/settings";
+import StoriesView from "./home/StoriesView";
 
 const HEADER_HEIGHT =
   Platform.OS === "ios" ? 115 : 70 + StatusBar.currentHeight;
@@ -43,6 +44,9 @@ const HomeScreen = () => {
         <View>
           <HomeHeader />
           <HomeStatusBar />
+        </View>
+        <View>
+          <StoriesView />
         </View>
         <View>
           <Text>

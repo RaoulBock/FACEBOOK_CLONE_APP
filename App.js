@@ -20,6 +20,7 @@ import AddWork from "./components/screens/profile/publicDetails/AddWork";
 import EducationHighSchoolInformation from "./components/screens/profile/publicDetails/EducationHighSchoolInformation";
 import EducationCollegeInformation from "./components/screens/profile/publicDetails/EducationCollegeInformation";
 import NewStatusView from "./components/screens/home/NewStatusView";
+import StoriesView from "./components/screens/home/StoriesView";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
