@@ -29,7 +29,10 @@ const HomeHeader = () => {
             alignItems: "center"
           }}
         >
-          <TouchableOpacity style={{ marginRight: 20 }}>
+          <TouchableOpacity
+            style={{ marginRight: 20 }}
+            onPress={() => setNavPage(APP_PAGES.SEARCH)}
+          >
             {APP_ICONS.SEARCH}
           </TouchableOpacity>
           <TouchableOpacity>{APP_ICONS.MESSAGE}</TouchableOpacity>

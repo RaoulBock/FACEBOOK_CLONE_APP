@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  ScrollView,
+  TouchableOpacity
+} from "react-native";
 import React, { useContext } from "react";
 
 import { AppContext, AppProvider } from "../../../context/AppProvider";
@@ -25,10 +32,26 @@ const SearchView = () => {
         }}
       >
         <ProfileHeader onPress={() => setNavPage(APP_PAGES.HOME)} />
+        <View style={{ borderWidth: 1, borderColor: "#eee", marginTop: 10 }} />
       </View>
+
       <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
-        <View>
-          <Text>Recent Search</Text>
+        <View
+          style={{
+            marginLeft: 20,
+            marginTop: 10,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginRight: 20
+          }}
+        >
+          <Text style={{ fontWeight: "700", fontSize: 20 }}>
+            Recent Searchs
+          </Text>
+          <TouchableOpacity>
+            <Text style={{ color: "#40739e", fontWeight: "800" }}>See all</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
