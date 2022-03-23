@@ -46,7 +46,8 @@ export const APP_PAGES = {
     HOMETOWN: "HOMETOWN"
   },
   RELATIONSHIP: "RELATIONSHIP",
-  NEW_STATUS: "NEW_STATUS"
+  NEW_STATUS: "NEW_STATUS",
+  SEARCH: "SEARCH"
 };
 
 export const APP_ICONS = {

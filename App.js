@@ -21,6 +21,7 @@ import EducationHighSchoolInformation from "./components/screens/profile/publicD
 import EducationCollegeInformation from "./components/screens/profile/publicDetails/EducationCollegeInformation";
 import NewStatusView from "./components/screens/home/NewStatusView";
 import StoriesView from "./components/screens/home/StoriesView";
+import SearchView from "./components/screens/views/SearchView";
 const NavComp = () => {
   const { navPage, setNavPage } = useContext(AppContext);
   const onSetNavPage = (e) => {
@@ -61,6 +62,7 @@ const NavComp = () => {
           <EducationCollegeInformation />
         )}
         {navPage === APP_PAGES.NEW_STATUS && <NewStatusView />}
+        {navPage === APP_PAGES.SEARCH && <SearchView />}
       </View>
     </SafeAreaView>
   );
