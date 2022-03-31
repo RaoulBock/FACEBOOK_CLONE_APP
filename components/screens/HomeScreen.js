@@ -42,7 +42,7 @@ const HomeScreen = () => {
       >
         <View>
           <HomeHeader />
-          <HomeStatusBar />
+          {/* <HomeStatusBar /> */}
         </View>
       </View>
     </View>

@@ -21,7 +21,7 @@ const HomeHeader = () => {
         }}
       >
         <Text style={{ fontWeight: "bold", color: "#4b7bec", fontSize: 38 }}>
-          Facebook
+          La-Palace
         </Text>
         <View
           style={{
