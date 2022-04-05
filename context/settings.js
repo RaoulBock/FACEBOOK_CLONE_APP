@@ -248,7 +248,7 @@ export const APP_STYLE = {
     height: 200,
     borderWidth: 5,
     borderColor: "white",
-    marginLeft: 100
+    marginLeft: 80
   },
   userCoverPicture: {
     width: "100%",
