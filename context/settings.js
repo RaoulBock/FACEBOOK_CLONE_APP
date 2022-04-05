@@ -285,7 +285,7 @@ export const APP_STYLE = {
     width: 100,
     height: 100,
     borderRadius: 18,
-    margin: 10
+    marginLeft: 5
   },
   isActive: {
     borderBottomWidth: 2,
