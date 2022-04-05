@@ -41,8 +41,8 @@ const AddWork = () => {
           alignItems: "center",
           justifyContent: "space-between",
           marginTop: 20,
-          marginLeft: 20,
-          marginRight: 20
+          marginLeft: 10,
+          marginRight: 10
         }}
       >
         <Text>{APP_ICONS.BRIEFCASE}</Text>
