@@ -319,8 +319,8 @@ export const APP_STYLE = {
     marginLeft: 45
   },
   userProfilePictureForStatusView: {
-    width: 25,
-    height: 25,
+    width: 40,
+    height: 40,
     borderRadius: 50
   }
 };

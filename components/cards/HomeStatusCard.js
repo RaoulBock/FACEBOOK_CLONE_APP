@@ -37,22 +37,37 @@ export const HomeStatusCard = ({ item, index }) => {
     <View
       style={{
         backgroundColor: "white",
-        marginLeft: 10,
-        marginRight: 10,
         width: "100%"
       }}
     >
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image
-          source={{ uri: profilePicture }}
-          style={styles.userProfilePictureForStatusView}
-          key={index}
-        />
-        <Text>
-          {firstName}
-          {""}
-          {lastName}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginLeft: 10,
+          marginRight: 10,
+          marginTop: 10,
+          backgroundColor: "#eee",
+          padding: 10,
+          borderRadius: 8
+        }}
+      >
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Image
+            source={{ uri: profilePicture }}
+            style={styles.userProfilePictureForStatusView}
+            key={index}
+          />
+          <Text style={{ fontWeight: "bold" }}>{firstName}</Text>
+          <Text style={{ marginLeft: 2, fontWeight: "bold" }}>{lastName}</Text>
+        </View>
+        <Text style={{ fontWeight: "bold" }}>
+          {new Date().toLocaleString()}
         </Text>
+      </View>
+      <View>
+        <Text>{[newStatus]}</Text>
       </View>
     </View>
   );
