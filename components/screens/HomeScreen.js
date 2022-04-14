@@ -14,6 +14,7 @@ import HomeStatusBar from "../headers/HomeStatusBar";
 import { AppContext, AppProvider } from "../../context/AppProvider";
 
 import { APP_PAGES, APP_ICONS, APP_STYLE } from "../../context/settings";
+import { HomeStatusCard } from "../cards/HomeStatusCard";
 
 const HEADER_HEIGHT =
   Platform.OS === "ios" ? 115 : 70 + StatusBar.currentHeight;
@@ -51,9 +52,16 @@ const HomeScreen = () => {
           <HomeHeader />
           <HomeStatusBar />
         </View>
-        <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
-          <View></View>
-        </ScrollView>
+        <View>
+          <FlatList
+            data={newStatus}
+            showsVerticalScrollIndicator={false}
+            keyExtractor={(item, index) => "key" + index}
+            renderItem={({ item }) => {
+              return <HomeStatusCard item={item} />;
+            }}
+          />
+        </View>
       </View>
     </View>
   );

@@ -34,7 +34,8 @@ export const AppContext = React.createContext({
   relationShip: "",
   setRelationShip: (val) => {},
   newStatus: [],
-  setNewStatus: (val) => {}
+  setNewStatus: (val) => {},
+  postHandler: (val) => {}
 });
 
 export const AppProvider = ({ children }) => {
@@ -55,7 +56,9 @@ export const AppProvider = ({ children }) => {
   const [relationShip, setRelationShip] = useState("");
 
   const [newStatus, setNewStatus] = useState([]);
-
+  const postHandler = (newValueStatus) => {
+    setNewStatus((newStatus) => [...newStatus, newValueStatus]);
+  };
   return (
     <AppContext.Provider
       value={{
@@ -90,7 +93,8 @@ export const AppProvider = ({ children }) => {
         relationShip,
         setRelationShip,
         newStatus,
-        setNewStatus
+        setNewStatus,
+        postHandler
       }}
     >
       {children}

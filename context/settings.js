@@ -313,10 +313,14 @@ export const APP_STYLE = {
   },
   genderPicker: {
     alignItems: "center",
-
     backgroundColor: "#eee",
     borderRadius: 10,
     width: 300,
     marginLeft: 45
+  },
+  userProfilePictureForStatusView: {
+    width: 25,
+    height: 25,
+    borderRadius: 50
   }
 };

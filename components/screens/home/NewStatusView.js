@@ -14,6 +14,8 @@ import { APP_PAGES, APP_ICONS, APP_STYLE } from "../../../context/settings";
 
 import DefaultHeader from "../../headers/DefaultHeader";
 
+import { postHandler } from "../../../context/AppProvider";
+
 const NewStatusView = () => {
   const {
     navPage,
@@ -75,7 +77,7 @@ const NewStatusView = () => {
         <TextInput
           multiline
           numberOfLines={4}
-          onChangeText={() => setNewStatus([...newStatus])}
+          onChangeText={(newStatus) => setNewStatus([{ newStatus }])}
           //   value={value}
           style={{
             padding: 10,
