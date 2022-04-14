@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, StatusBar, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  FlatList,
+  ScrollView
+} from "react-native";
 import React, { useContext } from "react";
 
 import HomeHeader from "../headers/HomeHeader";
@@ -42,8 +49,11 @@ const HomeScreen = () => {
       >
         <View>
           <HomeHeader />
-          {/* <HomeStatusBar /> */}
+          <HomeStatusBar />
         </View>
+        <ScrollView style={{ marginTop: HEADER_HEIGHT }}>
+          <View></View>
+        </ScrollView>
       </View>
     </View>
   );

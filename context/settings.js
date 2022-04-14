@@ -231,6 +231,12 @@ export const APP_STYLE = {
     padding: "1.9%",
     borderRadius: 10
   },
+  DefaultStatusInput: {
+    backgroundColor: "#eee",
+    width: 300,
+    padding: 15,
+    borderRadius: 10
+  },
   userCoverPicture: {
     height: 300
   },

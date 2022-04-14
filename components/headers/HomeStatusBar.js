@@ -41,16 +41,12 @@ const HomeStatusBar = () => {
           justifyContent: "space-between",
           marginTop: 20,
           marginLeft: 10,
-          marginRight: 10,
+          marginRight: 15,
           marginBottom: 10
         }}
       >
-        <Image
-          source={{ uri: profilePicture }}
-          style={{ width: 40, height: 40, borderRadius: 500000 }}
-        />
         <TouchableOpacity onPress={() => setNavPage(APP_PAGES.NEW_STATUS)}>
-          <Text style={styles.DefaultInput}>Whats on your mind?</Text>
+          <Text style={styles.DefaultStatusInput}>Whats on your mind?</Text>
         </TouchableOpacity>
         <TouchableOpacity>{APP_ICONS.PHOTO}</TouchableOpacity>
       </View>
